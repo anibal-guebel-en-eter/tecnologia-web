@@ -44,7 +44,7 @@ body {
     color: var(--dark-text);
     background: var(--dark-bg);
     min-height: 100vh;
-    overflow: hidden; /* Hide scrollbars from the body */
+    
 }
 
 body > * {
@@ -85,39 +85,7 @@ ul {
 }
 
 
-.navigation {
-    background: var(--dark-surface);
-    height: 4rem;
-    padding: 1rem 0;
-    margin-inline: auto;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-}
 
-.nav-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.nav-btn {
-    background: var(--primary-blue);
-    color: var(--white);
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: clamp(0.9rem, 0.8rem + 0.5vw, 1.2rem);;
-}
-
-.nav-btn:hover {
-    background: var(--deep-blue);
-    transform: translateY(-2px);
-}
 
 
 section > * {
@@ -419,16 +387,7 @@ section > * {
     z-index: 10;
 }
 
-/* Asegurar que el contenido de los slides se muestre correctamente */
-.slide-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    z-index: 5;
-    font-size: clamp(0.8rem, 0.7rem + 0.45vw, 1rem);
-}
+
 
 .resources-grid {
     display: grid;
@@ -589,4 +548,11 @@ section > * {
     font-weight: 200;
     display: inline-block;
     padding-inline-start: 1em;
+}
+
+dl {
+    margin-left: 1.5em;
+    :is(h2, h3, h4, h5, h6) {
+        margin-top: 1em;
+    }
 }
