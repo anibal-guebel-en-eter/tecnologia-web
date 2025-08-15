@@ -585,6 +585,7 @@ img {
     align-items: start;
     gap: .5em;
     margin-block-end: 1em;
+    margin-inline-start: -1em;
 
     > * {
         margin: 0;
