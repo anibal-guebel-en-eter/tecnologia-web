@@ -656,3 +656,18 @@ h1, h2, h3, h4, h5, h6 {
     .slide-counter { display: none; }
     body { background: white; }
 }
+
+
+.con-video {
+    display: grid;
+    grid-template-columns: 50% 25%;
+    justify-content: center;
+    gap: 2em;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
