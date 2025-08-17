@@ -1,992 +1,991 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gutenberg Avanzado + Patrones - Semana 2</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gutenberg + Patrones - Semana 2</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="scripts.js" defer></script>
 </head>
 <body>
 
-    <main>
-        <!-- Slide 1: Portada -->
-        <section id="slide-1" class="slide hero fade-in con-video">
-            <video src="IA/editor-de-bloques.mp4" controls></video>
-            <div style="text-align: left !important; line-height: 1.25 !important;">
-                <span class="slide-counter">1/35</span>
-                <h2>Gutenberg + Patrones</h2>
-                <h1>Tecnología Web - Semana 2</h1>
-                <h3><strong>Comunicación y Marketing Digital</strong></h3>
-                <h4>Eter, Escuela de Comunicación</h4>
-            </div>
-        </section>
+  <main>
+    <!-- Slide 1: Portada -->
+    <section id="slide-1" class="slide hero fade-in con-video">
+      <video src="IA/editor-de-bloques.mp4" controls></video>
+      <div style="text-align: left !important; line-height: 1.25 !important;">
+        <span class="slide-counter">1/35</span>
+        <h2>Gutenberg + Patrones</h2>
+        <h1>Tecnología Web - Semana 2</h1>
+        <h3><strong>Comunicación y Marketing Digital</strong></h3>
+        <h4>Eter, Escuela de Comunicación</h4>
+      </div>
+    </section>
 
-        <!-- Slide 2: Repaso Rápido -->
-        <section id="slide-2" class="slide fade-in">
-            <span class="slide-counter">2/35</span>
-            <h2>Repaso Rápido</h2>
-            <h3>¿Qué logramos la semana pasada?</h3>
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <p><span class="emoji">✅</span>WordPress Studio instalado</p>
-                </div>
-                <div class="stat-card">
-                    <p><span class="emoji">🏠</span>Sitio local funcionando</p>
-                </div>
-                <div class="stat-card">
-                    <p><span class="emoji">🎛️</span>WordPress Admin dominado</p>
-                </div>
-                <div class="stat-card">
-                    <p><span class="emoji">🌐</span>Conceptos web claros</p>
-                </div>
-            </div>
-            <div class="success-box">
-                <p><span class="emoji">🚀</span><strong>Hoy elevamos el nivel: De usuario básico a creador avanzado</strong></p>
-            </div>
-        </section>
+    <!-- Slide 2: Repaso Rápido -->
+    <section id="slide-2" class="slide fade-in">
+      <span class="slide-counter">2/35</span>
+      <h2>Repaso Rápido</h2>
+      <h3>¿Qué logramos la semana pasada?</h3>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <p><span class="emoji">✅</span>WordPress Studio instalado</p>
+        </div>
+        <div class="stat-card">
+          <p><span class="emoji">🏠</span>Sitio local funcionando</p>
+        </div>
+        <div class="stat-card">
+          <p><span class="emoji">🎛️</span>WordPress Admin dominado</p>
+        </div>
+        <div class="stat-card">
+          <p><span class="emoji">🌐</span>Conceptos web claros</p>
+        </div>
+      </div>
+      <div class="success-box">
+        <p><span class="emoji">🚀</span><strong>Hoy elevamos el nivel: De usuario básico a creador avanzado</strong></p>
+      </div>
+    </section>
 
-        <!-- Slide 3: Preguntas Disparadoras -->
-        <section id="slide-3" class="slide fade-in" style="display: grid; align-content: space-between;">
-            <span class="slide-counter">3/35</span>
-            <h2>Preguntas Disparadoras</h2>
-            <div class="preguntas">
-                <p><span class="emoji">🧩</span><strong>¿Qué es realmente Gutenberg?</strong></p>
-                <p><span class="emoji">⚡</span><strong>¿Por qué revolucionó WordPress?</strong></p>
-                <p><span class="emoji">🎨</span><strong>¿Cómo crear páginas sin saber código?</strong></p>
-            </div>
-            <div class="warning-box" style="display: grid; place-items: center;">
-                <p style="margin: 0;"><em>[ Compartimos experiencias de la semana ]</em></p>
-            </div>
-        </section>
+    <!-- Slide 3: Preguntas Disparadoras -->
+    <section id="slide-3" class="slide fade-in" style="display: grid; align-content: space-between;">
+      <span class="slide-counter">3/35</span>
+      <h2>Preguntas Disparadoras</h2>
+      <div class="preguntas">
+        <p><span class="emoji">🧩</span><strong>¿Qué es realmente Gutenberg?</strong></p>
+        <p><span class="emoji">⚡</span><strong>¿Por qué revolucionó WordPress?</strong></p>
+        <p><span class="emoji">🎨</span><strong>¿Cómo crear páginas sin saber código?</strong></p>
+      </div>
+      <div class="warning-box" style="display: grid; place-items: center;">
+        <p style="margin: 0;"><em>[ Compartimos experiencias de la semana ]</em></p>
+      </div>
+    </section>
 
-        <!-- Slide 4: La Historia de Gutenberg -->
-        <section id="slide-4" class="slide fade-in">
-            <span class="slide-counter">4/35</span>
-            <h2>La Historia de Gutenberg</h2>
-            <h3>De la Prensa a la Web</h3>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-year">1440</div>
-                    <strong>Johannes Gutenberg</strong> - La imprenta revoluciona la comunicación
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">2003-2017</div>
-                    <strong>WordPress Clásico</strong> - Editor de texto simple, limitaciones de diseño
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">2018</div>
-                    <strong>Gutenberg llega</strong> - WordPress 5.0, editor de bloques
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">2024</div>
-                    <strong>Site Editor</strong> - Edición completa de temas, FSE (Full Site Editing)
-                </div>
-            </div>
-            <div class="success-box">
-                <p><strong>¿La idea?</strong> Democratizar el diseño web como Gutenberg democratizó la escritura</p>
-            </div>
-        </section>
+    <!-- Slide 4: La Historia de Gutenberg -->
+    <section id="slide-4" class="slide fade-in">
+      <span class="slide-counter">4/35</span>
+      <h2>La Historia de Gutenberg</h2>
+      <h3>De la Prensa a la Web</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-year">1440</div>
+          <strong>Johannes Gutenberg</strong> - La imprenta revoluciona la comunicación
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2003-2017</div>
+          <strong>WordPress Clásico</strong> - Editor de texto simple, limitaciones de diseño
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2018</div>
+          <strong>Gutenberg llega</strong> - WordPress 5.0, editor de bloques
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2024</div>
+          <strong>Site Editor</strong> - Edición completa de temas, FSE (Full Site Editing)
+        </div>
+      </div>
+      <div class="success-box">
+        <p><strong>¿La idea?</strong> Democratizar el diseño web como Gutenberg democratizó la escritura</p>
+      </div>
+    </section>
 
-        <!-- Slide 5: ¿Qué es Gutenberg? -->
-        <section id="slide-5" class="slide fade-in">
-            <span class="slide-counter">5/35</span>
-            <h2>¿Qué es Gutenberg?</h2>
-            <h3>El Editor de Bloques</h3>
-            <div class="resources-grid">
-                <div class="resource-card">
-                    <h4><span class="emoji">🧩</span>Concepto de Bloques</h4>
-                    <p>Cada elemento (texto, imagen, botón) es un bloque independiente y reutilizable</p>
-                </div>
-                <div class="resource-card">
-                    <h4><span class="emoji">🎨</span>WYSIWYG Verdadero</h4>
-                    <p>What You See Is What You Get - El frontend se ve exactamente como en el editor</p>
-                </div>
-                <div class="resource-card">
-                    <h4><span class="emoji">🔧</span>Sin Código</span></h4>
-                    <p>Diseño visual profesional sin tocar HTML/CSS</p>
-                </div>
-                <div class="resource-card">
-                    <h4><span class="emoji">📱</span>Responsive Nativo</h4>
-                    <p>Adaptación automática a móviles y tablets</p>
-                </div>
-            </div>
-        </section>
+    <!-- Slide 5: ¿Qué es Gutenberg? -->
+    <section id="slide-5" class="slide fade-in">
+      <span class="slide-counter">5/35</span>
+      <h2>¿Qué es Gutenberg?</h2>
+      <h3>El Editor de Bloques</h3>
+      <div class="resources-grid">
+        <div class="resource-card">
+          <h4><span class="emoji">🧩</span>Concepto de Bloques</h4>
+          <p>Cada elemento (texto, imagen, botón) es un bloque independiente y reutilizable</p>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">🎨</span>WYSIWYG Verdadero</h4>
+          <p>What You See Is What You Get - El frontend se ve exactamente como en el editor</p>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">🔧</span>Sin Código</span></h4>
+          <p>Diseño visual profesional sin tocar HTML/CSS</p>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">📱</span>Responsive Nativo</h4>
+          <p>Adaptación automática a móviles y tablets</p>
+        </div>
+      </div>
+    </section>
 
-        <!-- Slide 6: Antes vs Después -->
-        <section id="slide-6" class="slide fade-in">
-            <span class="slide-counter">6/35</span>
-            <h2>Antes vs Después</h2>
-            <h3>La Revolución en Acción</h3>
-            <table class="comparison-table">
-                <thead>
-                    <tr>
-                        <th>WordPress Clásico</th>
-                        <th>WordPress Gutenberg</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>📝 Una caja de texto grande</td>
-                        <td>🧩 Bloques específicos</td>
-                    </tr>
-                    <tr>
-                        <td>🎨 HTML/CSS para diseño</td>
-                        <td>🎯 Controles visuales</td>
-                    </tr>
-                    <tr>
-                        <td>⚠️ Vista previa separada</td>
-                        <td>👀 Edición en vivo</td>
-                    </tr>
-                    <tr>
-                        <td>🔌 Muchos plugins para funciones básicas</td>
-                        <td>⚡ Funcionalidad nativa extendida</td>
-                    </tr>
-                    <tr>
-                        <td>😰 Curva de aprendizaje empinada</td>
-                        <td>😊 Intuitivo desde el primer día</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+    <!-- Slide 6: Antes vs Después -->
+    <section id="slide-6" class="slide fade-in">
+      <span class="slide-counter">6/35</span>
+      <h2>Antes vs Después</h2>
+      <h3>La Revolución en Acción</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>WordPress Clásico</th>
+            <th>WordPress Gutenberg</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>📝 Una caja de texto grande</td>
+            <td>🧩 Bloques específicos</td>
+          </tr>
+          <tr>
+            <td>🎨 HTML/CSS para diseño</td>
+            <td>🎯 Controles visuales</td>
+          </tr>
+          <tr>
+            <td>⚠️ Vista previa separada</td>
+            <td>👀 Edición en vivo</td>
+          </tr>
+          <tr>
+            <td>🔌 Muchos plugins para funciones básicas</td>
+            <td>⚡ Funcionalidad nativa extendida</td>
+          </tr>
+          <tr>
+            <td>😰 Curva de aprendizaje empinada</td>
+            <td>😊 Intuitivo desde el primer día</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
 
-        <!-- Slide 7: Bloques Fundamentales -->
-        <section id="slide-7" class="slide fade-in">
-            <span class="slide-counter">7/35</span>
-            <h2>Bloques Fundamentales</h2>
-            <h3>Los Elementos Básicos</h3>
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <h4>📝 Texto</h4>
-                    <p>Párrafo, Títulos (H1-H6), Lista, Cita</p>
-                </div>
-                <div class="stat-card">
-                    <h4>📸 Medios</h4>
-                    <p>Imagen, Galería, Video, Audio</p>
-                </div>
-                <div class="stat-card">
-                    <h4>🎨 Diseño</h4>
-                    <p>Columnas, Grupo, Espaciador, Separador</p>
-                </div>
-                <div class="stat-card">
-                    <h4>🔧 Widgets</h4>
-                    <p>Botones, Formulario de contacto, HTML personalizado</p>
-                </div>
-                <div class="stat-card">
-                    <h4>📊 Integración</h4>
-                    <p>YouTube, Twitter, Instagram, Google Maps</p>
-                </div>
-                <div class="stat-card">
-                    <h4>⚡ Avanzados</h4>
-                    <p>Código, Tabla, Archivo, Más (+100 bloques)</p>
-                </div>
-            </div>
-        </section>
+    <!-- Slide 7: Bloques Fundamentales -->
+    <section id="slide-7" class="slide fade-in">
+      <span class="slide-counter">7/35</span>
+      <h2>Bloques Fundamentales</h2>
+      <h3>Los Elementos Básicos</h3>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h4>📝 Texto</h4>
+          <p>Párrafo, Títulos (H1-H6), Lista, Cita</p>
+        </div>
+        <div class="stat-card">
+          <h4>📸 Medios</h4>
+          <p>Imagen, Galería, Video, Audio</p>
+        </div>
+        <div class="stat-card">
+          <h4>🎨 Diseño</h4>
+          <p>Columnas, Grupo, Espaciador, Separador</p>
+        </div>
+        <div class="stat-card">
+          <h4>🔧 Widgets</h4>
+          <p>Botones, Formulario de contacto, HTML personalizado</p>
+        </div>
+        <div class="stat-card">
+          <h4>📊 Integración</h4>
+          <p>YouTube, Twitter, Instagram, Google Maps</p>
+        </div>
+        <div class="stat-card">
+          <h4>⚡ Avanzados</h4>
+          <p>Código, Tabla, Archivo, Más (+100 bloques)</p>
+        </div>
+      </div>
+    </section>
 
-        <!-- Slide 8: Demo Time -->
-        <section id="slide-8" class="slide fade-in">
-            <span class="slide-counter">8/35</span>
-            <h2><span style="display: block; line-height: 1; font-size: smaller; opacity: .7;">Demo Time</span>
-            Abrimos WordPress Studio</h2>
-            <div style="text-align: center; padding: 2rem;">
-                <p style="font-size: 2rem; margin-bottom: 1rem;"><span class="emoji">🚀</span><strong>Crear nuestra primera página con Gutenberg</strong></p>
-            </div>
-            <div class="action-list">
-                <div class="action-item">
-                    <span class="emoji">▶️</span>Iniciar sitio local
-                </div>
-                <div class="action-item">
-                    <span class="emoji">➕</span>Crear nueva página
-                </div>
-                <div class="action-item">
-                    <span class="emoji">🧩</span>Explorar bloques básicos
-                </div>
-                <div class="action-item">
-                    <span class="emoji">👀</span>Vista previa en vivo
-                </div>
-            </div>
-        </section>
+    <!-- Slide 8: Demo Time -->
+    <section id="slide-8" class="slide fade-in">
+      <span class="slide-counter">8/35</span>
+      <h2><span style="display: block; line-height: 1; font-size: smaller; opacity: .7;">Demo Time</span>
+      Abrimos WordPress Studio</h2>
+      <div style="text-align: center; padding: 2rem;">
+        <p style="font-size: 2rem; margin-bottom: 1rem;"><span class="emoji">🚀</span><strong>Crear nuestra primera página con Gutenberg</strong></p>
+      </div>
+      <div class="action-list">
+        <div class="action-item">
+          <span class="emoji">▶️</span>Iniciar sitio local
+        </div>
+        <div class="action-item">
+          <span class="emoji">➕</span>Crear nueva página
+        </div>
+        <div class="action-item">
+          <span class="emoji">🧩</span>Explorar bloques básicos
+        </div>
+        <div class="action-item">
+          <span class="emoji">👀</span>Vista previa en vivo
+        </div>
+      </div>
+    </section>
 
-        <!-- Slide 9: Interfaz del Editor -->
-        <section id="slide-9" class="slide fade-in">
-            <span class="slide-counter">9/35</span>
-            <h2>Interfaz del Editor</h2>
-            <h3>Anatomía de Gutenberg</h3>
-            <div class="resources-grid">
-                <div class="resource-card">
-                    <h4><span class="emoji">🎯</span>Barra Superior</h4>
-                    <ul>
-                        <li>Guardar/Actualizar</li>
-                        <li>Vista previa</li>
-                        <li>Configuración</li>
-                    </ul>
-                </div>
-                <div class="resource-card">
-                    <h4><span class="emoji">📝</span>Área de Contenido</h4>
-                    <ul>
-                        <li>Canvas de edición</li>
-                        <li>Inserción de bloques (+)</li>
-                        <li>Edición in-situ</li>
-                    </ul>
-                </div>
-                <div class="resource-card">
-                    <h4><span class="emoji">🛠️</span>Panel Lateral</h4>
-                    <ul>
-                        <li>Configuración de documento</li>
-                        <li>Configuración de bloque</li>
-                        <li>Navegación de bloques</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+    <!-- Slide 9: Interfaz del Editor -->
+    <section id="slide-9" class="slide fade-in">
+      <span class="slide-counter">9/35</span>
+      <h2>Interfaz del Editor</h2>
+      <h3>Anatomía de Gutenberg</h3>
+      <div class="resources-grid">
+        <div class="resource-card">
+          <h4><span class="emoji">🎯</span>Barra Superior</h4>
+          <ul>
+            <li>Guardar/Actualizar</li>
+            <li>Vista previa</li>
+            <li>Configuración</li>
+          </ul>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">📝</span>Área de Contenido</h4>
+          <ul>
+            <li>Canvas de edición</li>
+            <li>Inserción de bloques (+)</li>
+            <li>Edición in-situ</li>
+          </ul>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">🛠️</span>Panel Lateral</h4>
+          <ul>
+            <li>Configuración de documento</li>
+            <li>Configuración de bloque</li>
+            <li>Navegación de bloques</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-        <!-- Slide 10: Insertar Bloques -->
-        <section id="slide-10" class="slide fade-in">
-            <span class="slide-counter">10/35</span>
-            <h2>Insertar Bloques</h2>
-            <h3>Tres Formas Principales</h3>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-year">1️⃣</div>
-                    <p><strong>Botón (+) Principal:</strong> Esquina superior izquierda</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">2️⃣</div>
-                    <p><strong>Botón (+) Flotante:</strong> Entre bloques o líneas vacías</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">3️⃣</div>
-                    <p><strong>Comando "/" (slash):</strong> Escribir "/imagen" para insertar imagen</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">💡</div>
-                    <p><strong>Tip Pro:</strong> También funciona con Enter en línea vacía</p>
-                </div>
-            </div>
-        </section>
+    <!-- Slide 10: Insertar Bloques -->
+    <section id="slide-10" class="slide fade-in">
+      <span class="slide-counter">10/35</span>
+      <h2>Insertar Bloques</h2>
+      <h3>Tres Formas Principales</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-year">1️⃣</div>
+          <p><strong>Botón (+) Principal:</strong> Esquina superior izquierda</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2️⃣</div>
+          <p><strong>Botón (+) Flotante:</strong> Entre bloques o líneas vacías</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">3️⃣</div>
+          <p><strong>Comando "/" (slash):</strong> Escribir "/imagen" para insertar imagen</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">💡</div>
+          <p><strong>Tip Pro:</strong> También funciona con Enter en línea vacía</p>
+        </div>
+      </div>
+    </section>
 
-        <!-- Slide 11: Configuración de Bloques -->
-        <section id="slide-11" class="slide fade-in">
-            <span class="slide-counter">11/35</span>
-            <h2>Configuración de Bloques</h2>
-            <h3>Panel Lateral Derecho</h3>
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <h4>🎨 Configuración Visual</h4>
-                    <ul>
-                        <li>Colores de fondo y texto</li>
-                        <li>Tipografía y tamaños</li>
-                        <li>Alineación y espaciado</li>
-                    </ul>
-                </div>
-                <div class="stat-card">
-                    <h4>📐 Configuración Avanzada</h4>
-                    <ul>
-                        <li>Clases CSS personalizadas</li>
-                        <li>ID únicos</li>
-                        <li>Datos structured</li>
-                    </ul>
-                </div>
-                <div class="stat-card">
-                    <h4>📱 Responsive</h4>
-                    <ul>
-                        <li>Visibilidad por dispositivo</li>
-                        <li>Tamaños adaptativos</li>
-                        <li>Ordenamiento móvil</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+    <!-- Slide 11: Configuración de Bloques -->
+    <section id="slide-11" class="slide fade-in">
+      <span class="slide-counter">11/35</span>
+      <h2>Configuración de Bloques</h2>
+      <h3>Panel Lateral Derecho</h3>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h4>🎨 Configuración Visual</h4>
+          <ul>
+            <li>Colores de fondo y texto</li>
+            <li>Tipografía y tamaños</li>
+            <li>Alineación y espaciado</li>
+          </ul>
+        </div>
+        <div class="stat-card">
+          <h4>📐 Configuración Avanzada</h4>
+          <ul>
+            <li>Clases CSS personalizadas</li>
+            <li>ID únicos</li>
+            <li>Datos structured</li>
+          </ul>
+        </div>
+        <div class="stat-card">
+          <h4>📱 Responsive</h4>
+          <ul>
+            <li>Visibilidad por dispositivo</li>
+            <li>Tamaños adaptativos</li>
+            <li>Ordenamiento móvil</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-        <!-- Slide 12: ¿Qué son los Patrones? -->
-        <section id="slide-12" class="slide fade-in">
-            <span class="slide-counter">12/35</span>
-            <h2>¿Qué son los Patrones?</h2>
-            <h3>Block Patterns Revolution</h3>
-            <div class="success-box">
-                <h4><span class="emoji">✨</span>Definición:</h4>
-                <p>Combinaciones prediseñadas de bloques que crean secciones completas (hero, testimonios, precios, etc.)</p>
-            </div>
-            <div class="resources-grid">
-                <div class="resource-card">
-                    <h4><span class="emoji">⚡</span>Velocidad</h4>
-                    <p>Página profesional en minutos, no horas</p>
-                </div>
-                <div class="resource-card">
-                    <h4><span class="emoji">🎯</span>Consistencia</h4>
-                    <p>Diseño coherente en todo el sitio</p>
-                </div>
-                <div class="resource-card">
-                    <h4><span class="emoji">🔄</span>Reutilización</h4>
-                    <p>Un patrón → múltiples páginas</p>
-                </div>
-                <div class="resource-card">
-                    <h4><span class="emoji">✏️</span>Personalización</h4>
-                    <p>Base sólida, ajustes específicos</p>
-                </div>
-            </div>
-        </section>
+    <!-- Slide 12: ¿Qué son los Patrones? -->
+    <section id="slide-12" class="slide fade-in">
+      <span class="slide-counter">12/35</span>
+      <h2>¿Qué son los Patrones?</h2>
+      <h3>Block Patterns Revolution</h3>
+      <div class="success-box">
+        <h4><span class="emoji">✨</span>Definición:</h4>
+        <p>Combinaciones prediseñadas de bloques que crean secciones completas (hero, testimonios, precios, etc.)</p>
+      </div>
+      <div class="resources-grid">
+        <div class="resource-card">
+          <h4><span class="emoji">⚡</span>Velocidad</h4>
+          <p>Página profesional en minutos, no horas</p>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">🎯</span>Consistencia</h4>
+          <p>Diseño coherente en todo el sitio</p>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">🔄</span>Reutilización</h4>
+          <p>Un patrón → múltiples páginas</p>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">✏️</span>Personalización</h4>
+          <p>Base sólida, ajustes específicos</p>
+        </div>
+      </div>
+    </section>
 
-        <!-- Slide 13: Tipos de Patrones -->
-        <section id="slide-13" class="slide fade-in">
-            <span class="slide-counter">13/35</span>
-            <h2>Tipos de Patrones</h2>
-            <h3>Categorías Principales</h3>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-year"><span class="emoji">🏠</span>Headers</div>
-                    <p>Encabezados de página con navegación, hero sections, banners</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year"><span class="emoji">📄</span>Content</div>
-                    <p>Secciones de contenido, testimonios, features, productos</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year"><span class="emoji">📞</span>Call to Action</div>
-                    <p>Botones destacados, formularios de suscripción, contacto</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year"><span class="emoji">🦶</span>Footers</div>
-                    <p>Pie de página con links, info de contacto, redes sociales</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year"><span class="emoji">📊</span>Marketing</div>
-                    <p>Precios, estadísticas, comparaciones, landing pages</p>
-                </div>
-            </div>
-        </section>
+    <!-- Slide 13: Tipos de Patrones -->
+    <section id="slide-13" class="slide fade-in">
+      <span class="slide-counter">13/35</span>
+      <h2>Tipos de Patrones</h2>
+      <h3>Categorías Principales</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-year"><span class="emoji">🏠</span>Headers</div>
+          <p>Encabezados de página con navegación, hero sections, banners</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year"><span class="emoji">📄</span>Content</div>
+          <p>Secciones de contenido, testimonios, features, productos</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year"><span class="emoji">📞</span>Call to Action</div>
+          <p>Botones destacados, formularios de suscripción, contacto</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year"><span class="emoji">🦶</span>Footers</div>
+          <p>Pie de página con links, info de contacto, redes sociales</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year"><span class="emoji">📊</span>Marketing</div>
+          <p>Precios, estadísticas, comparaciones, landing pages</p>
+        </div>
+      </div>
+    </section>
 
-        <!-- Slide 14: Acceder a los Patrones -->
-        <section id="slide-14" class="slide fade-in">
-            <span class="slide-counter">14/35</span>
-            <h2>Acceder a los Patrones</h2>
-            <h3>¿Dónde los encuentro?</h3>
-            <div class="action-list">
-                <div class="action-item">
-                    <span class="emoji">➕</span>Botón (+) Insertar → Pestaña "Patrones"
-                </div>
-                <div class="action-item">
-                    <span class="emoji">🔍</span>Buscar por categoría o palabra clave
-                </div>
-                <div class="action-item">
-                    <span class="emoji">👀</span>Vista previa al pasar el mouse
-                </div>
-                <div class="action-item">
-                    <span class="emoji">📱</span>Filtros por tema activo
-                </div>
-            </div>
-            <div class="warning-box">
-                <p><span class="emoji">💡</span><strong>Tip:</strong> Los patrones cambian según el tema que tengas activo</p>
-            </div>
-        </section>
+    <!-- Slide 14: Acceder a los Patrones -->
+    <section id="slide-14" class="slide fade-in">
+      <span class="slide-counter">14/35</span>
+      <h2>Acceder a los Patrones</h2>
+      <h3>¿Dónde los encuentro?</h3>
+      <div class="action-list">
+        <div class="action-item">
+          <span class="emoji">➕</span>Botón (+) Insertar → Pestaña "Patrones"
+        </div>
+        <div class="action-item">
+          <span class="emoji">🔍</span>Buscar por categoría o palabra clave
+        </div>
+        <div class="action-item">
+          <span class="emoji">👀</span>Vista previa al pasar el mouse
+        </div>
+        <div class="action-item">
+          <span class="emoji">📱</span>Filtros por tema activo
+        </div>
+      </div>
+      <div class="warning-box">
+        <p><span class="emoji">💡</span><strong>Tip:</strong> Los patrones cambian según el tema que tengas activo</p>
+      </div>
+    </section>
 
-        <!-- Slide 15: Demo Patrones -->
-        <section id="slide-15" class="slide fade-in">
-            <span class="slide-counter">15/35</span>
-            <h2><span style="display: block; line-height: 1; font-size: smaller; opacity: .7;">Demo Práctico</span>
-            Construyamos una Landing Page</h2>
-            <div style="text-align: center; padding: 2rem;">
-                <p style="font-size: 1.5rem; margin-bottom: 2rem;"><span class="emoji">🎯</span><strong>"Página de servicios profesionales en 10 minutos"</strong></p>
-            </div>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-year">1</div>
-                    <p>Elegir patrón de Hero con CTA</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">2</div>
-                    <p>Añadir sección de servicios (3 columnas)</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">3</div>
-                    <p>Insertar testimonios con patrón</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">4</div>
-                    <p>Footer con información de contacto</p>
-                </div>
-            </div>
-        </section>
+    <!-- Slide 15: Demo Patrones -->
+    <section id="slide-15" class="slide fade-in">
+      <span class="slide-counter">15/35</span>
+      <h2><span style="display: block; line-height: 1; font-size: smaller; opacity: .7;">Demo Práctico</span>
+      Construyamos una Landing Page</h2>
+      <div style="text-align: center; padding: 2rem;">
+        <p style="font-size: 1.5rem; margin-bottom: 2rem;"><span class="emoji">🎯</span><strong>"Página de servicios profesionales en 10 minutos"</strong></p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-year">1</div>
+          <p>Elegir patrón de Hero con CTA</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2</div>
+          <p>Añadir sección de servicios (3 columnas)</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">3</div>
+          <p>Insertar testimonios con patrón</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">4</div>
+          <p>Footer con información de contacto</p>
+        </div>
+      </div>
+    </section>
 
-        <!-- Slide 16: Personalizar Patrones -->
-        <section id="slide-16" class="slide fade-in">
-            <span class="slide-counter">16/35</span>
-            <h2>Personalizar Patrones</h2>
-            <h3>De Plantilla a Único</h3>
-            <div class="resources-grid">
-                <div class="resource-card">
-                    <h4><span class="emoji">✏️</span>Contenido</h4>
-                    <ul>
-                        <li>Cambiar textos e imágenes</li>
-                        <li>Ajustar enlaces y CTAs</li>
-                        <li>Modificar estructuras</li>
-                    </ul>
-                </div>
-                <div class="resource-card">
-                    <h4><span class="emoji">🎨</span>Diseño</h4>
-                    <ul>
-                        <li>Colores corporativos</li>
-                        <li>Tipografías de marca</li>
-                        <li>Espaciados personalizados</li>
-                    </ul>
-                </div>
-                <div class="resource-card">
-                    <h4><span class="emoji">📱</span>Responsive</h4>
-                    <ul>
-                        <li>Ajustar para móviles</li>
-                        <li>Reordenar elementos</li>
-                        <li>Optimizar legibilidad</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+    <!-- Slide 16: Personalizar Patrones -->
+    <section id="slide-16" class="slide fade-in">
+      <span class="slide-counter">16/35</span>
+      <h2>Personalizar Patrones</h2>
+      <h3>De Plantilla a Único</h3>
+      <div class="resources-grid">
+        <div class="resource-card">
+          <h4><span class="emoji">✏️</span>Contenido</h4>
+          <ul>
+            <li>Cambiar textos e imágenes</li>
+            <li>Ajustar enlaces y CTAs</li>
+            <li>Modificar estructuras</li>
+          </ul>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">🎨</span>Diseño</h4>
+          <ul>
+            <li>Colores corporativos</li>
+            <li>Tipografías de marca</li>
+            <li>Espaciados personalizados</li>
+          </ul>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">📱</span>Responsive</h4>
+          <ul>
+            <li>Ajustar para móviles</li>
+            <li>Reordenar elementos</li>
+            <li>Optimizar legibilidad</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-        <!-- Slide 17: Gutenberg para Marketing -->
-        <section id="slide-17" class="slide fade-in">
-            <span class="slide-counter">17/35</span>
-            <h2>Gutenberg para Marketing</h2>
-            <h3>Casos de Uso Profesionales</h3>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-year"><span class="emoji">🎯</span>Landing Pages</div>
-                    <ul>
-                        <li>Hero + beneficios + testimonios + CTA</li>
-                        <li>Optimización de conversión</li>
-                        <li>A/B testing fácil</li>
-                    </ul>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year"><span class="emoji">📧</span>Email Marketing</div>
-                    <ul>
-                        <li>Páginas de suscripción</li>
-                        <li>Thank you pages</li>
-                        <li>Formularios integrados</li>
-                    </ul>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year"><span class="emoji">🛍️</span>E-commerce</div>
-                    <ul>
-                        <li>Páginas de producto</li>
-                        <li>Comparativas</li>
-                        <li>Ofertas especiales</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+    <!-- Slide 17: Gutenberg para Marketing -->
+    <section id="slide-17" class="slide fade-in">
+      <span class="slide-counter">17/35</span>
+      <h2>Gutenberg para Marketing</h2>
+      <h3>Casos de Uso Profesionales</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-year"><span class="emoji">🎯</span>Landing Pages</div>
+          <ul>
+            <li>Hero + beneficios + testimonios + CTA</li>
+            <li>Optimización de conversión</li>
+            <li>A/B testing fácil</li>
+          </ul>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year"><span class="emoji">📧</span>Email Marketing</div>
+          <ul>
+            <li>Páginas de suscripción</li>
+            <li>Thank you pages</li>
+            <li>Formularios integrados</li>
+          </ul>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year"><span class="emoji">🛍️</span>E-commerce</div>
+          <ul>
+            <li>Páginas de producto</li>
+            <li>Comparativas</li>
+            <li>Ofertas especiales</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-        <!-- Slide 18: Bloques Esenciales para Marketing -->
-        <section id="slide-18" class="slide fade-in">
-            <span class="slide-counter">18/35</span>
-            <h2>Bloques Esenciales para Marketing</h2>
-            <h3>Tu Toolkit Profesional</h3>
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <h4>🔘 Botones</h4>
-                    <p>CTAs optimizados, tracking de clicks</p>
-                </div>
-                <div class="stat-card">
-                    <h4>📊 Columnas</h4>
-                    <p>Comparativas, features, testimonios</p>
-                </div>
-                <div class="stat-card">
-                    <h4>📝 Formularios</h4>
-                    <p>Contacto, suscripción, leads</p>
-                </div>
-                <div class="stat-card">
-                    <h4>🖼️ Imágenes</h4>
-                    <p>Hero sections, productos, equipo</p>
-                </div>
-                <div class="stat-card">
-                    <h4>💬 Testimonios</h4>
-                    <p>Social proof, reseñas</p>
-                </div>
-                <div class="stat-card">
-                    <h4>📹 Video</h4>
-                    <p>YouTube, Vimeo, explicativos</p>
-                </div>
-            </div>
-        </section>
+    <!-- Slide 18: Bloques Esenciales para Marketing -->
+    <section id="slide-18" class="slide fade-in">
+      <span class="slide-counter">18/35</span>
+      <h2>Bloques Esenciales para Marketing</h2>
+      <h3>Tu Toolkit Profesional</h3>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h4>🔘 Botones</h4>
+          <p>CTAs optimizados, tracking de clicks</p>
+        </div>
+        <div class="stat-card">
+          <h4>📊 Columnas</h4>
+          <p>Comparativas, features, testimonios</p>
+        </div>
+        <div class="stat-card">
+          <h4>📝 Formularios</h4>
+          <p>Contacto, suscripción, leads</p>
+        </div>
+        <div class="stat-card">
+          <h4>🖼️ Imágenes</h4>
+          <p>Hero sections, productos, equipo</p>
+        </div>
+        <div class="stat-card">
+          <h4>💬 Testimonios</h4>
+          <p>Social proof, reseñas</p>
+        </div>
+        <div class="stat-card">
+          <h4>📹 Video</h4>
+          <p>YouTube, Vimeo, explicativos</p>
+        </div>
+      </div>
+    </section>
 
-        <!-- Slide 19: Reutilizar Bloques -->
-        <section id="slide-19" class="slide fade-in">
-            <span class="slide-counter">19/35</span>
-            <h2>Reutilizar Bloques</h2>
-            <h3>Eficiencia Máxima</h3>
-            <div class="success-box">
-                <h4><span class="emoji">🔄</span>Bloques Reutilizables:</h4>
-                <p>Cualquier bloque o grupo puede convertirse en plantilla reutilizable</p>
-            </div>
-            <div class="action-list">
-                <div class="action-item">
-                    Crear bloque perfectamente diseñado
-                </div>
-                <div class="action-item">
-                    Opciones → "Crear bloque reutilizable"
-                </div>
-                <div class="action-item">
-                    Disponible en todas las páginas/posts
-                </div>
-                <div class="action-item">
-                    Cambio global = actualización automática
-                </div>
-            </div>
-            <div class="warning-box">
-                <p><span class="emoji">💡</span><strong>Casos ideales:</strong> Headers, footers, CTAs recurrentes, info de contacto</p>
-            </div>
-        </section>
+    <!-- Slide 19: Reutilizar Bloques -->
+    <section id="slide-19" class="slide fade-in">
+      <span class="slide-counter">19/35</span>
+      <h2>Reutilizar Bloques</h2>
+      <h3>Eficiencia Máxima</h3>
+      <div class="success-box">
+        <h4><span class="emoji">🔄</span>Bloques Reutilizables:</h4>
+        <p>Cualquier bloque o grupo puede convertirse en plantilla reutilizable</p>
+      </div>
+      <div class="action-list">
+        <div class="action-item">
+          Crear bloque perfectamente diseñado
+        </div>
+        <div class="action-item">
+          Opciones → "Crear bloque reutilizable"
+        </div>
+        <div class="action-item">
+          Disponible en todas las páginas/posts
+        </div>
+        <div class="action-item">
+          Cambio global = actualización automática
+        </div>
+      </div>
+      <div class="warning-box">
+        <p><span class="emoji">💡</span><strong>Casos ideales:</strong> Headers, footers, CTAs recurrentes, info de contacto</p>
+      </div>
+    </section>
 
-        <!-- Slide 20: Navegación de Bloques -->
-        <section id="slide-20" class="slide fade-in">
-            <span class="slide-counter">20/35</span>
-            <h2>Navegación de Bloques</h2>
-            <h3>Vista de Estructura</h3>
-            <div class="resources-grid">
-                <div class="resource-card">
-                    <h4><span class="emoji">🗂️</span>List View</h4>
-                    <p>Panel lateral con estructura jerárquica de todos los bloques</p>
-                </div>
-                <div class="resource-card">
-                    <h4><span class="emoji">🎯</span>Selección Rápida</h4>
-                    <p>Click directo en cualquier bloque desde la lista</p>
-                </div>
-                <div class="resource-card">
-                    <h4><span class="emoji">👁️</span>Visibilidad</h4>
-                    <p>Mostrar/ocultar bloques sin eliminarlos</p>
-                </div>
-                <div class="resource-card">
-                    <h4><span class="emoji">📝</span>Renombrar</h4>
-                    <p>Nombres descriptivos para mejor organización</p>
-                </div>
-            </div>
-            <div class="success-box">
-                <p><strong>Shortcut:</strong> Ctrl + Shift + Y para abrir/cerrar List View</p>
-            </div>
-        </section>
+    <!-- Slide 20: Navegación de Bloques -->
+    <section id="slide-20" class="slide fade-in">
+      <span class="slide-counter">20/35</span>
+      <h2>Navegación de Bloques</h2>
+      <h3>Vista de Estructura</h3>
+      <div class="resources-grid">
+        <div class="resource-card">
+          <h4><span class="emoji">🗂️</span>List View</h4>
+          <p>Panel lateral con estructura jerárquica de todos los bloques</p>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">🎯</span>Selección Rápida</h4>
+          <p>Click directo en cualquier bloque desde la lista</p>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">👁️</span>Visibilidad</h4>
+          <p>Mostrar/ocultar bloques sin eliminarlos</p>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">📝</span>Renombrar</h4>
+          <p>Nombres descriptivos para mejor organización</p>
+        </div>
+      </div>
+      <div class="success-box">
+        <p><strong>Shortcut:</strong> Ctrl + Shift + Y para abrir/cerrar List View</p>
+      </div>
+    </section>
 
-        <!-- Slide 21: Responsive Design -->
-        <section id="slide-21" class="slide fade-in">
-            <span class="slide-counter">21/35</span>
-            <h2>Responsive Design</h2>
-            <h3>Mobile-First con Gutenberg</h3>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-year">📱</div>
-                    <p><strong>Vista Previa Responsive:</strong> Íconos móvil/tablet/desktop</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">🔧</div>
-                    <p><strong>Configuraciones por Dispositivo:</strong> Tamaños de fuente, espaciado, visibilidad</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">📐</div>
-                    <p><strong>Columnas Adaptables:</strong> 3 columnas → 1 columna en móvil automáticamente</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">🖼️</div>
-                    <p><strong>Imágenes Responsive:</strong> Redimensionado automático, lazy loading</p>
-                </div>
-            </div>
-        </section>
+    <!-- Slide 21: Responsive Design -->
+    <section id="slide-21" class="slide fade-in">
+      <span class="slide-counter">21/35</span>
+      <h2>Responsive Design</h2>
+      <h3>Mobile-First con Gutenberg</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-year">📱</div>
+          <p><strong>Vista Previa Responsive:</strong> Íconos móvil/tablet/desktop</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">🔧</div>
+          <p><strong>Configuraciones por Dispositivo:</strong> Tamaños de fuente, espaciado, visibilidad</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">📐</div>
+          <p><strong>Columnas Adaptables:</strong> 3 columnas → 1 columna en móvil automáticamente</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">🖼️</div>
+          <p><strong>Imágenes Responsive:</strong> Redimensionado automático, lazy loading</p>
+        </div>
+      </div>
+    </section>
 
-        <!-- Slide 22: Keyboard Shortcuts -->
-        <section id="slide-22" class="slide fade-in">
-            <span class="slide-counter">22/35</span>
-            <h2>Keyboard Shortcuts</h2>
-            <h3>Productividad Pro</h3>
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <h4>⌨️ Navegación</h4>
-                    <ul>
-                        <li>Tab: siguiente bloque</li>
-                        <li>Shift+Tab: bloque anterior</li>
-                        <li>Ctrl+A: seleccionar todo</li>
-                    </ul>
-                </div>
-                <div class="stat-card">
-                    <h4>✏️ Edición</h4>
-                    <ul>
-                        <li>Ctrl+Z: deshacer</li>
-                        <li>Ctrl+Y: rehacer</li>
-                        <li>Ctrl+C/V: copiar/pegar</li>
-                    </ul>
-                </div>
-                <div class="stat-card">
-                    <h4>🚀 Rápidos</h4>
-                    <ul>
-                        <li>Ctrl+S: guardar</li>
-                        <li>Ctrl+Shift+Y: list view</li>
-                        <li>/: insertar bloque</li>
-                    </ul>
-                </div>
-                <div class="stat-card">
-                    <h4>🎨 Formato</h4>
-                    <ul>
-                        <li>Ctrl+B: negrita</li>
-                        <li>Ctrl+I: cursiva</li>
-                        <li>Ctrl+K: enlace</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+    <!-- Slide 22: Keyboard Shortcuts -->
+    <section id="slide-22" class="slide fade-in">
+      <span class="slide-counter">22/35</span>
+      <h2>Keyboard Shortcuts</h2>
+      <h3>Productividad Pro</h3>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h4>⌨️ Navegación</h4>
+          <ul>
+            <li>Tab: siguiente bloque</li>
+            <li>Shift+Tab: bloque anterior</li>
+            <li>Ctrl+A: seleccionar todo</li>
+          </ul>
+        </div>
+        <div class="stat-card">
+          <h4>✏️ Edición</h4>
+          <ul>
+            <li>Ctrl+Z: deshacer</li>
+            <li>Ctrl+Y: rehacer</li>
+            <li>Ctrl+C/V: copiar/pegar</li>
+          </ul>
+        </div>
+        <div class="stat-card">
+          <h4>🚀 Rápidos</h4>
+          <ul>
+            <li>Ctrl+S: guardar</li>
+            <li>Ctrl+Shift+Y: list view</li>
+            <li>/: insertar bloque</li>
+          </ul>
+        </div>
+        <div class="stat-card">
+          <h4>🎨 Formato</h4>
+          <ul>
+            <li>Ctrl+B: negrita</li>
+            <li>Ctrl+I: cursiva</li>
+            <li>Ctrl+K: enlace</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-        <!-- Slide 23: Herramientas de Accesibilidad -->
-        <section id="slide-23" class="slide fade-in">
-            <span class="slide-counter">23/35</span>
-            <h2>Herramientas de Accesibilidad</h2>
-            <h3>Diseño Inclusivo</h3>
-            <div class="resources-grid">
-                <div class="resource-card">
-                    <h4><span class="emoji">🔤</span>Alt Text Automático</h4>
-                    <p>Sugerencias de texto alternativo para imágenes</p>
-                </div>
-                <div class="resource-card">
-                    <h4><span class="emoji">🎯</span>Contraste</h4>
-                    <p>Verificación automática de contraste de colores</p>
-                </div>
-                <div class="resource-card">
-                    <h4><span class="emoji">⌨️</span>Navegación por Teclado</h4>
-                    <p>Soporte completo para usuarios sin mouse</p>
-                </div>
-                <div class="resource-card">
-                    <h4><span class="emoji">📖</span>Lectores de Pantalla</h4>
-                    <p>Estructura semántica correcta automática</p>
-                </div>
-            </div>
-            <div class="success-box">
-                <p><span class="emoji">♿</span><strong>Accesibilidad = Mejor SEO + Mayor alcance</strong></p>
-            </div>
-        </section>
+    <!-- Slide 23: Herramientas de Accesibilidad -->
+    <section id="slide-23" class="slide fade-in">
+      <span class="slide-counter">23/35</span>
+      <h2>Herramientas de Accesibilidad</h2>
+      <h3>Diseño Inclusivo</h3>
+      <div class="resources-grid">
+        <div class="resource-card">
+          <h4><span class="emoji">🔤</span>Alt Text Automático</h4>
+          <p>Sugerencias de texto alternativo para imágenes</p>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">🎯</span>Contraste</h4>
+          <p>Verificación automática de contraste de colores</p>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">⌨️</span>Navegación por Teclado</h4>
+          <p>Soporte completo para usuarios sin mouse</p>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">📖</span>Lectores de Pantalla</h4>
+          <p>Estructura semántica correcta automática</p>
+        </div>
+      </div>
+      <div class="success-box">
+        <p><span class="emoji">♿</span><strong>Accesibilidad = Mejor SEO + Mayor alcance</strong></p>
+      </div>
+    </section>
 
-        <!-- Slide 24: Gutenberg vs Page Builders -->
-        <section id="slide-24" class="slide fade-in">
-            <span class="slide-counter">24/35</span>
-            <h2>Gutenberg vs Page Builders</h2>
-            <h3>¿Por qué elegir el editor nativo?</h3>
-            <table class="comparison-table">
-                <thead>
-                    <tr>
-                        <th>Page Builders (Elementor, Divi)</th>
-                        <th>Gutenberg Nativo</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>💰 Costo adicional</td>
-                        <td>🆓 Incluido en WordPress</td>
-                    </tr>
-                    <tr>
-                        <td>🐌 Código adicional = lentitud</td>
-                        <td>⚡ Optimizado, rápido</td>
-                    </tr>
-                    <tr>
-                        <td>🔒 Dependencia del plugin</td>
-                        <td>🔓 Estándar de WordPress</td>
-                    </tr>
-                    <tr>
-                        <td>📚 Curva de aprendizaje específica</td>
-                        <td>🎯 Skills transferibles</td>
-                    </tr>
-                    <tr>
-                        <td>🔄 Problemas de migración</td>
-                        <td>✅ Contenido portable</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+    <!-- Slide 24: Gutenberg vs Page Builders -->
+    <section id="slide-24" class="slide fade-in">
+      <span class="slide-counter">24/35</span>
+      <h2>Gutenberg vs Page Builders</h2>
+      <h3>¿Por qué elegir el editor nativo?</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Page Builders (Elementor, Divi)</th>
+            <th>Gutenberg Nativo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>💰 Costo adicional</td>
+            <td>🆓 Incluido en WordPress</td>
+          </tr>
+          <tr>
+            <td>🐌 Código adicional = lentitud</td>
+            <td>⚡ Optimizado, rápido</td>
+          </tr>
+          <tr>
+            <td>🔒 Dependencia del plugin</td>
+            <td>🔓 Estándar de WordPress</td>
+          </tr>
+          <tr>
+            <td>📚 Curva de aprendizaje específica</td>
+            <td>🎯 Skills transferibles</td>
+          </tr>
+          <tr>
+            <td>🔄 Problemas de migración</td>
+            <td>✅ Contenido portable</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
 
-        <!-- Slide 25: Casos de Estudio -->
-        <section id="slide-25" class="slide fade-in">
-            <span class="slide-counter">25/35</span>
-            <h2>Casos de Estudio</h2>
-            <h3>Gutenberg en Acción</h3>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-year"><span class="emoji">🏢</span>Empresa B2B</div>
-                    <p><strong>Desafío:</strong> Página de servicios profesional</p>
-                    <p><strong>Solución:</strong> Patrones de hero + servicios + testimonios</p>
-                    <p><strong>Resultado:</strong> +40% tiempo en página, +25% conversiones</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year"><span class="emoji">🛍️</span>E-commerce Local</div>
-                    <p><strong>Desafío:</strong> Páginas de productos atractivas</p>
-                    <p><strong>Solución:</strong> Bloques de galería + especificaciones + CTA</p>
-                    <p><strong>Resultado:</strong> -60% tasa de rebote, +30% ventas</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year"><span class="emoji">📝</span>Blog Personal</div>
-                    <p><strong>Desafío:</strong> Contenido visual atractivo</p>
-                    <p><strong>Solución:</strong> Patrones de contenido + multimedia</p>
-                    <p><strong>Resultado:</strong> +200% shares en redes sociales</p>
-                </div>
-            </div>
-        </section>
+    <!-- Slide 25: Casos de Estudio -->
+    <section id="slide-25" class="slide fade-in">
+      <span class="slide-counter">25/35</span>
+      <h2>Casos de Estudio</h2>
+      <h3>Gutenberg en Acción</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-year"><span class="emoji">🏢</span>Empresa B2B</div>
+          <p><strong>Desafío:</strong> Página de servicios profesional</p>
+          <p><strong>Solución:</strong> Patrones de hero + servicios + testimonios</p>
+          <p><strong>Resultado:</strong> +40% tiempo en página, +25% conversiones</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year"><span class="emoji">🛍️</span>E-commerce Local</div>
+          <p><strong>Desafío:</strong> Páginas de productos atractivas</p>
+          <p><strong>Solución:</strong> Bloques de galería + especificaciones + CTA</p>
+          <p><strong>Resultado:</strong> -60% tasa de rebote, +30% ventas</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year"><span class="emoji">📝</span>Blog Personal</div>
+          <p><strong>Desafío:</strong> Contenido visual atractivo</p>
+          <p><strong>Solución:</strong> Patrones de contenido + multimedia</p>
+          <p><strong>Resultado:</strong> +200% shares en redes sociales</p>
+        </div>
+      </div>
+    </section>
 
-        <!-- Slide 26: Práctica Dirigida -->
-        <section id="slide-26" class="slide fade-in">
-            <span class="slide-counter">26/35</span>
-            <h2>Práctica Dirigida</h2>
-            <h3>Construyamos Juntos</h3>
-            <div style="text-align: center; padding: 2rem;">
-                <p style="font-size: 1.5rem; margin-bottom: 2rem;"><span class="emoji">👥</span><strong>"Página de Servicios Profesionales"</strong></p>
-            </div>
-            <div class="action-list">
-                <div class="action-item">
-                    <span class="emoji">1️⃣</span>Hero con título impactante y CTA
-                </div>
-                <div class="action-item">
-                    <span class="emoji">2️⃣</span>Sección "Nuestros Servicios" (3 columnas)
-                </div>
-                <div class="action-item">
-                    <span class="emoji">3️⃣</span>Testimonios de clientes
-                </div>
-                <div class="action-item">
-                    <span class="emoji">4️⃣</span>Formulario de contacto
-                </div>
-                <div class="action-item">
-                    <span class="emoji">5️⃣</span>Footer informativo
-                </div>
-            </div>
-        </section>
+    <!-- Slide 26: Práctica Dirigida -->
+    <section id="slide-26" class="slide fade-in">
+      <span class="slide-counter">26/35</span>
+      <h2>Práctica Dirigida</h2>
+      <h3>Construyamos Juntos</h3>
+      <div style="text-align: center; padding: 2rem;">
+        <p style="font-size: 1.5rem; margin-bottom: 2rem;"><span class="emoji">👥</span><strong>"Página de Servicios Profesionales"</strong></p>
+      </div>
+      <div class="action-list">
+        <div class="action-item">
+          <span class="emoji">1️⃣</span>Hero con título impactante y CTA
+        </div>
+        <div class="action-item">
+          <span class="emoji">2️⃣</span>Sección "Nuestros Servicios" (3 columnas)
+        </div>
+        <div class="action-item">
+          <span class="emoji">3️⃣</span>Testimonios de clientes
+        </div>
+        <div class="action-item">
+          <span class="emoji">4️⃣</span>Formulario de contacto
+        </div>
+        <div class="action-item">
+          <span class="emoji">5️⃣</span>Footer informativo
+        </div>
+      </div>
+    </section>
 
-        <!-- Slide 27: Optimización y Performance -->
-        <section id="slide-27" class="slide fade-in">
-            <span class="slide-counter">27/35</span>
-            <h2>Optimización y Performance</h2>
-            <h3>Gutenberg Eficiente</h3>
-            <div class="resources-grid">
-                <div class="resource-card">
-                    <h4><span class="emoji">🖼️</span>Imágenes</h4>
-                    <ul>
-                        <li>WebP automático</li>
-                        <li>Lazy loading nativo</li>
-                        <li>Responsive images</li>
-                    </ul>
-                </div>
-                <div class="resource-card">
-                    <h4><span class="emoji">⚡</span>Carga</h4>
-                    <ul>
-                        <li>CSS crítico inline</li>
-                        <li>JavaScript diferido</li>
-                        <li>Bloques bajo demanda</li>
-                    </ul>
-                </div>
-                <div class="resource-card">
-                    <h4><span class="emoji">📱</span>Mobile</h4>
-                    <ul>
-                        <li>Touch optimizado</li>
-                        <li>Viewport adaptativo</li>
-                        <li>Core Web Vitals</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+    <!-- Slide 27: Optimización y Performance -->
+    <section id="slide-27" class="slide fade-in">
+      <span class="slide-counter">27/35</span>
+      <h2>Optimización y Performance</h2>
+      <h3>Gutenberg Eficiente</h3>
+      <div class="resources-grid">
+        <div class="resource-card">
+          <h4><span class="emoji">🖼️</span>Imágenes</h4>
+          <ul>
+            <li>WebP automático</li>
+            <li>Lazy loading nativo</li>
+            <li>Responsive images</li>
+          </ul>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">⚡</span>Carga</h4>
+          <ul>
+            <li>CSS crítico inline</li>
+            <li>JavaScript diferido</li>
+            <li>Bloques bajo demanda</li>
+          </ul>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">📱</span>Mobile</h4>
+          <ul>
+            <li>Touch optimizado</li>
+            <li>Viewport adaptativo</li>
+            <li>Core Web Vitals</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-        <!-- Slide 28: Troubleshooting Común -->
-        <section id="slide-28" class="slide fade-in">
-            <span class="slide-counter">28/35</span>
-            <h2>Troubleshooting Común</h2>
-            <h3>Problemas y Soluciones</h3>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-year">❌</div>
-                    <p><strong>Problema:</strong> "Bloque no reconocido" después de cambiar tema</p>
-                    <p><strong>Solución:</strong> Convertir a HTML o buscar bloque equivalente</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">🐌</div>
-                    <p><strong>Problema:</strong> Editor lento con muchos bloques</p>
-                    <p><strong>Solución:</strong> Usar bloques reutilizables y patrones</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">📱</div>
-                    <p><strong>Problema:</strong> Diseño roto en móvil</p>
-                    <p><strong>Solución:</strong> Revisar configuraciones responsive por bloque</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">🎨</div>
-                    <p><strong>Problema:</strong> Colores no coinciden con la marca</p>
-                    <p><strong>Solución:</strong> Personalizar paleta global en el Site Editor</p>
-                </div>
-            </div>
-        </section>
+    <!-- Slide 28: Troubleshooting Común -->
+    <section id="slide-28" class="slide fade-in">
+      <span class="slide-counter">28/35</span>
+      <h2>Troubleshooting Común</h2>
+      <h3>Problemas y Soluciones</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-year">❌</div>
+          <p><strong>Problema:</strong> "Bloque no reconocido" después de cambiar tema</p>
+          <p><strong>Solución:</strong> Convertir a HTML o buscar bloque equivalente</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">🐌</div>
+          <p><strong>Problema:</strong> Editor lento con muchos bloques</p>
+          <p><strong>Solución:</strong> Usar bloques reutilizables y patrones</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">📱</div>
+          <p><strong>Problema:</strong> Diseño roto en móvil</p>
+          <p><strong>Solución:</strong> Revisar configuraciones responsive por bloque</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">🎨</div>
+          <p><strong>Problema:</strong> Colores no coinciden con la marca</p>
+          <p><strong>Solución:</strong> Personalizar paleta global en el Site Editor</p>
+        </div>
+      </div>
+    </section>
 
-        <!-- Slide 29: Recursos y Herramientas -->
-        <section id="slide-29" class="slide fade-in">
-            <span class="slide-counter">29/35</span>
-            <h2>Recursos y Herramientas</h2>
-            <h3>Para Profundizar</h3>
-            <div class="resources-grid">
-                <div class="resource-card" style="grid-column: span 2;">
-                    <h4><span class="emoji">📚</span>Documentación Oficial</h4>
-                    <p>developer.wordpress.org/block-editor/</p>
-                </div>
-                <div class="resource-card">
-                    <h4><span class="emoji">🎨</span>Patrones Gratuitos</h4>
-                    <p>wordpress.org/patterns/</p>
-                </div>
-                <div class="resource-card">
-                    <h4><span class="emoji">🧩</span>Bloques Adicionales</h4>
-                    <p>Plugin "Block Directory"</p>
-                </div>
-                <div class="resource-card" style="grid-column: span 2;">
-                    <h4><span class="emoji">🎥</span>Tutoriales Avanzados</h4>
-                    <p>YouTube: "WordPress Gutenberg Academy"</p>
-                </div>
-                <div class="resource-card">
-                    <h4><span class="emoji">💬</span>Comunidad</h4>
-                    <p>WordPress Slack #core-editor</p>
-                </div>
-            </div>
-        </section>
+    <!-- Slide 29: Recursos y Herramientas -->
+    <section id="slide-29" class="slide fade-in">
+      <span class="slide-counter">29/35</span>
+      <h2>Recursos y Herramientas</h2>
+      <h3>Para Profundizar</h3>
+      <div class="resources-grid">
+        <div class="resource-card" style="grid-column: span 2;">
+          <h4><span class="emoji">📚</span>Documentación Oficial</h4>
+          <p>developer.wordpress.org/block-editor/</p>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">🎨</span>Patrones Gratuitos</h4>
+          <p>wordpress.org/patterns/</p>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">🧩</span>Bloques Adicionales</h4>
+          <p>Plugin "Block Directory"</p>
+        </div>
+        <div class="resource-card" style="grid-column: span 2;">
+          <h4><span class="emoji">🎥</span>Tutoriales Avanzados</h4>
+          <p>YouTube: "WordPress Gutenberg Academy"</p>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">💬</span>Comunidad</h4>
+          <p>WordPress Slack #core-editor</p>
+        </div>
+      </div>
+    </section>
 
-        <!-- Slide 30: Próxima Semana -->
-        <section id="slide-30" class="slide fade-in">
-            <span class="slide-counter">30/35</span>
-            <h2>Próxima Semana</h2>
-            <h3>Vista Previa: Temas y Personalización</h3>
-            <div class="success-box">
-                <h4><span class="emoji">🎨</span>Tema: "Site Editor + Full Site Editing (FSE)"</h4>
-            </div>
-            <div class="resources-grid">
-                <div class="resource-card">
-                    <h4><span class="emoji">🖌️</span>Qué aprenderemos</h4>
-                    <ul>
-                        <li>Personalizar temas completos</li>
-                        <li>Headers y footers dinámicos</li>
-                        <li>Sistema de colores global</li>
-                        <li>Tipografías corporativas</li>
-                    </ul>
-                </div>
-                <div class="resource-card">
-                    <h4><span class="emoji">📝</span>Tarea para casa</h4>
-                    <ul>
-                        <li>Completar página de servicios</li>
-                        <li>Experimentar con 3 patrones diferentes</li>
-                        <li>Crear un bloque reutilizable</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+    <!-- Slide 30: Próxima Semana -->
+    <section id="slide-30" class="slide fade-in">
+      <span class="slide-counter">30/35</span>
+      <h2>Próxima Semana</h2>
+      <h3>Vista Previa: Temas y Personalización</h3>
+      <div class="success-box">
+        <h4><span class="emoji">🎨</span>Tema: "Site Editor + Full Site Editing (FSE)"</h4>
+      </div>
+      <div class="resources-grid">
+        <div class="resource-card">
+          <h4><span class="emoji">🖌️</span>Qué aprenderemos</h4>
+          <ul>
+            <li>Personalizar temas completos</li>
+            <li>Headers y footers dinámicos</li>
+            <li>Sistema de colores global</li>
+            <li>Tipografías corporativas</li>
+          </ul>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">📝</span>Tarea para casa</h4>
+          <ul>
+            <li>Completar página de servicios</li>
+            <li>Experimentar con 3 patrones diferentes</li>
+            <li>Crear un bloque reutilizable</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-        <!-- Slide 31: Ejercicio Individual -->
-        <section id="slide-31" class="slide fade-in">
-            <span class="slide-counter">31/35</span>
-            <h2>Ejercicio Individual</h2>
-            <h3>Pon en práctica lo aprendido</h3>
-            <div style="text-align: center; padding: 2rem;">
-                <p style="font-size: 1.5rem; margin-bottom: 2rem;"><span class="emoji">🎯</span><strong>"Crea tu página personal/profesional"</strong></p>
-            </div>
-            <div class="action-list">
-                <div class="action-item">
-                    <span class="emoji">👤</span>Sobre mí/nosotros con foto
-                </div>
-                <div class="action-item">
-                    <span class="emoji">💼</span>Servicios o habilidades (mín. 3)
-                </div>
-                <div class="action-item">
-                    <span class="emoji">📞</span>Información de contacto
-                </div>
-                <div class="action-item">
-                    <span class="emoji">🎨</span>Usar mínimo 2 patrones diferentes
-                </div>
-            </div>
-            <div class="warning-box">
-                <p><span class="emoji">⏰</span><strong>Tiempo: 20 minutos</strong></p>
-            </div>
-        </section>
+    <!-- Slide 31: Ejercicio Individual -->
+    <section id="slide-31" class="slide fade-in">
+      <span class="slide-counter">31/35</span>
+      <h2>Ejercicio Individual</h2>
+      <h3>Pon en práctica lo aprendido</h3>
+      <div style="text-align: center; padding: 2rem;">
+        <p style="font-size: 1.5rem; margin-bottom: 2rem;"><span class="emoji">🎯</span><strong>"Crea tu página personal/profesional"</strong></p>
+      </div>
+      <div class="action-list">
+        <div class="action-item">
+          <span class="emoji">👤</span>Sobre mí/nosotros con foto
+        </div>
+        <div class="action-item">
+          <span class="emoji">💼</span>Servicios o habilidades (mín. 3)
+        </div>
+        <div class="action-item">
+          <span class="emoji">📞</span>Información de contacto
+        </div>
+        <div class="action-item">
+          <span class="emoji">🎨</span>Usar mínimo 2 patrones diferentes
+        </div>
+      </div>
+      <div class="warning-box">
+        <p><span class="emoji">⏰</span><strong>Tiempo: 20 minutos</strong></p>
+      </div>
+    </section>
 
-        <!-- Slide 32: Compartir Resultados -->
-        <section id="slide-32" class="slide fade-in">
-            <span class="slide-counter">32/35</span>
-            <h2>Compartir Resultados</h2>
-            <h3>Presentación de Trabajos</h3>
-            <div class="success-box">
-                <h4><span class="emoji">👥</span>Metodología:</h4>
-                <ul>
-                    <li>2-3 voluntarios presentan su página</li>
-                    <li>Feedback constructivo del grupo</li>
-                    <li>Identificar patrones más efectivos</li>
-                    <li>Tips y trucos descubiertos</li>
-                </ul>
-            </div>
-            <div class="warning-box">
-                <p><span class="emoji">🎉</span><strong>¡Celebremos cada logro!</strong> El aprendizaje es colaborativo</p>
-            </div>
-        </section>
+    <!-- Slide 32: Compartir Resultados -->
+    <section id="slide-32" class="slide fade-in">
+      <span class="slide-counter">32/35</span>
+      <h2>Compartir Resultados</h2>
+      <h3>Presentación de Trabajos</h3>
+      <div class="success-box">
+        <h4><span class="emoji">👥</span>Metodología:</h4>
+        <ul>
+          <li>2-3 voluntarios presentan su página</li>
+          <li>Feedback constructivo del grupo</li>
+          <li>Identificar patrones más efectivos</li>
+          <li>Tips y trucos descubiertos</li>
+        </ul>
+      </div>
+      <div class="warning-box">
+        <p><span class="emoji">🎉</span><strong>¡Celebremos cada logro!</strong> El aprendizaje es colaborativo</p>
+      </div>
+    </section>
 
-        <!-- Slide 33: Reflexión y Aprendizajes -->
-        <section id="slide-33" class="slide fade-in">
-            <span class="slide-counter">33/35</span>
-            <h2>Reflexión y Aprendizajes</h2>
-            <h3>¿Qué descubrimos hoy?</h3>
-            <div style="font-size: 1.25rem; line-height: 2;">
-                <div class="warning-box">
-                    <p><span class="emoji">❓</span><strong>¿Cuál fue el patrón que más te gustó y por qué?</strong></p>
-                </div>
-                <div class="warning-box">
-                    <p><span class="emoji">❓</span><strong>¿Qué bloque te resulta más útil para tu área?</strong></p>
-                </div>
-                <div class="warning-box">
-                    <p><span class="emoji">❓</span><strong>¿Cómo aplicarías esto en un proyecto real?</strong></p>
-                </div>
-            </div>
-            <div class="success-box">
-                <p><em>[Intercambio de experiencias y dudas]</em></p>
-            </div>
-        </section>
+    <!-- Slide 33: Reflexión y Aprendizajes -->
+    <section id="slide-33" class="slide fade-in">
+      <span class="slide-counter">33/35</span>
+      <h2>Reflexión y Aprendizajes</h2>
+      <h3>¿Qué descubrimos hoy?</h3>
+      <div style="font-size: 1.25rem; line-height: 2;">
+        <div class="warning-box">
+          <p><span class="emoji">❓</span><strong>¿Cuál fue el patrón que más te gustó y por qué?</strong></p>
+        </div>
+        <div class="warning-box">
+          <p><span class="emoji">❓</span><strong>¿Qué bloque te resulta más útil para tu área?</strong></p>
+        </div>
+        <div class="warning-box">
+          <p><span class="emoji">❓</span><strong>¿Cómo aplicarías esto en un proyecto real?</strong></p>
+        </div>
+      </div>
+      <div class="success-box">
+        <p><em>[Intercambio de experiencias y dudas]</em></p>
+      </div>
+    </section>
 
-        <!-- Slide 34: Consejos Pro -->
-        <section id="slide-34" class="slide fade-in">
-            <span class="slide-counter">34/35</span>
-            <h2>Consejos Pro</h2>
-            <h3>Tips de Expertos</h3>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-year">🎯</div>
-                    <p><strong>Menos es más:</strong> Mejor 3 bloques bien configurados que 10 básicos</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">📱</div>
-                    <p><strong>Mobile first:</strong> Diseña primero para móvil, luego escala a desktop</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">🔄</div>
-                    <p><strong>Reutilización inteligente:</strong> Crea bibliotecas de bloques para proyectos futuros</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">⚡</div>
-                    <p><strong>Performance matters:</strong> Optimiza imágenes y usa patrones eficientes</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">🎨</div>
-                    <p><strong>Consistencia visual:</strong> Define paletas de colores y manténlas</p>
-                </div>
-            </div>
-        </section>
+    <!-- Slide 34: Consejos Pro -->
+    <section id="slide-34" class="slide fade-in">
+      <span class="slide-counter">34/35</span>
+      <h2>Consejos Pro</h2>
+      <h3>Tips de Expertos</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-year">🎯</div>
+          <p><strong>Menos es más:</strong> Mejor 3 bloques bien configurados que 10 básicos</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">📱</div>
+          <p><strong>Mobile first:</strong> Diseña primero para móvil, luego escala a desktop</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">🔄</div>
+          <p><strong>Reutilización inteligente:</strong> Crea bibliotecas de bloques para proyectos futuros</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">⚡</div>
+          <p><strong>Performance matters:</strong> Optimiza imágenes y usa patrones eficientes</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">🎨</div>
+          <p><strong>Consistencia visual:</strong> Define paletas de colores y manténlas</p>
+        </div>
+      </div>
+    </section>
 
-        <!-- Slide 35: ¡Felicitaciones! -->
-        <section id="slide-35" class="slide hero fade-in">
-            <span class="slide-counter">35/35</span>
-            <h2>¡Gutenberg Dominado!</h2>
-            <h3>Segundo Hito Completado</h3>
-            <div style="font-size: 1.25rem; line-height: 1.8;">
-                <p><span class="emoji">🎉</span><strong>Ya dominas el editor más poderoso de WordPress</strong></p>
-                <p><span class="emoji">🚀</span><strong>Puedes crear páginas profesionales sin código</strong></p>
-                <p><span class="emoji">💪</span><strong>Los patrones son tu nueva súper herramienta</strong></p>
-                <p><span class="emoji">🎯</span><strong>La próxima semana: Site Editor completo</strong></p>
-            </div>
-            <div style="margin-top: 3rem;">
-                <h3>¿Preguntas finales?</h3>
-                <p style="margin-top: 2rem;"><strong>¡Nos vemos en la Semana 3!</strong></p>
-            </div>
-        </section>
-    </main>
+    <!-- Slide 35: ¡Felicitaciones! -->
+    <section id="slide-35" class="slide hero fade-in">
+      <span class="slide-counter">35/35</span>
+      <h2>¡Gutenberg Dominado!</h2>
+      <h3>Segundo Hito Completado</h3>
+      <div style="font-size: 1.25rem; line-height: 1.8;">
+        <p><span class="emoji">🎉</span><strong>Ya dominas el editor más poderoso de WordPress</strong></p>
+        <p><span class="emoji">🚀</span><strong>Puedes crear páginas profesionales sin código</strong></p>
+        <p><span class="emoji">💪</span><strong>Los patrones son tu nueva súper herramienta</strong></p>
+        <p><span class="emoji">🎯</span><strong>La próxima semana: Site Editor completo</strong></p>
+      </div>
+      <div style="margin-top: 3rem;">
+        <h3>¿Preguntas finales?</h3>
+        <p style="margin-top: 2rem;"><strong>¡Nos vemos en la Semana 3!</strong></p>
+      </div>
+    </section>
+  </main>
 
-    <div class="slide-navigation-buttons">
-        <button class="nav-arrow prev" onclick="prevSlide()" aria-label="Slide anterior">&lt;</button>
-        <button class="nav-arrow next" onclick="nextSlide()" aria-label="Siguiente slide">&gt;</button>
-    </div>
+  <div class="slide-navigation-buttons">
+    <button class="nav-arrow prev" onclick="prevSlide()" aria-label="Slide anterior">&lt;</button>
+    <button class="nav-arrow next" onclick="nextSlide()" aria-label="Siguiente slide">&gt;</button>
+  </div>
 
 </body>
 </html>
-                
