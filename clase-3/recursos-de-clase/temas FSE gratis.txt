@@ -1,0 +1,80 @@
+Mejores temas FSE gratuitos de WordPress en agosto 2025
+
+
+Ollie
+https://es.wordpress.org/themes/ollie/
+Minimalista, limpio y con layouts especialmente pensados para startups y landing pages. Gran calidad de patrones predefinidos
+
+Neve FSE
+https://es.wordpress.org/themes/neve-fse/
+Carga muy rápida, y con plantillas FSE para ecommerce, portfolios y blogs
+
+Spectra One
+https://es.wordpress.org/themes/spectra-one/
+Tema FSE creado por los desarrolladores del plugin Spectra. Muy enfocado en performance y experiencia de edición visual
+
+Frost
+https://es.wordpress.org/themes/frost/
+Diseño elegante y modular, ideal para estudios creativos, portfolios o publicaciones profesionales. Incluye numerosos bloques personalizados
+
+Bricksy (octubre 2024)
+https://es.wordpress.org/themes/bricksy/
+Un tema de bloques gratuito con un diseño moderno y elegante. Destaca por venir con diseños de patrones pre-diseñados para diferentes nichos de blog como viajes, comida, moda y bodas, lo que lo hace muy versátil.
+
+Raft
+https://es.wordpress.org/themes/raft/
+Ideal para páginas de aterrizaje, negocios modernos. Plantillas listas para usar, estilos globales, personalización de encabezado, patrones de bloques
+
+Gutenify (ver los temas de menos de un año)
+https://es.wordpress.org/themes/search/Gutenify/
+Colección de más de 40 temas de bloques diferentes, todos ellos basados en el plugin Gutenify, que amplía el editor de bloques con nuevas funciones.
+
+Greenshift
+https://es.wordpress.org/themes/greenshift/
+Tema FSE (Full Site Editing) que sirve como base para tu sitio. El plugin de bloques Greenshift, un complemento que añade bloques avanzados, animaciones y opciones de diseño al editor de WordPress.
+
+Riverbank
+https://es.wordpress.org/themes/riverbank/
+Sencillo tema de WordPress construido para el editor de sitio completo. Tiene una disposición minimalista que se puede utilizar para crear un sitio web de alimentos orgánicos, plantas, bienestar de los animales, y organizaciones sin fines de lucro.
+
+Fork
+https://es.wordpress.org/themes/fork/
+Tema minimalista para pequeñas empresas, startups, agencias digitales, tiendas de comercio electrónico y sitios web de porfolio. Por defecto, tiene un fondo blanco, pero puedes usar sus estilos globales para añadir una combinación de colores fácilmente.
+
+Variations
+https://es.wordpress.org/themes/variations/
+Múltiples plantillas y patrones. Enfoque minimalista elegante. Totalmente basado en bloques. Personalización sin límites
+
+Extendable
+https://es.wordpress.org/themes/extendable/
+Tema versátil con 23 variaciones de estilo predefinidas instantáneas. Cambio de diseño con un clic. Compatible con WooCommerce. Soporte multiidioma completo. Optimizado para rendimiento
+
+YITH Wonder
+https://es.wordpress.org/themes/yith-wonder/
+Tema de bloques específico para WooCommerce de la empresa que está detrás de una serie de populares plugins para WooCommerce. Si estás buscando concretamente un tema de bloques para tu tienda WooCommerce, ésta es probablemente una de las mejores opciones a tener en cuenta.
+
+Kemet
+https://es.wordpress.org/themes/search/Kemet/
+Rápido y fiable. Diseñado específicamente para blogs personales, sitios de porfolio y pequeñas tiendas online.
+
+Axton
+https://es.wordpress.org/themes/axton/
+Tema minimalista para portafolios con variaciones de estilo claro y oscuro. Cuenta con una hermosa tipografía que aprovecha al máximo las imágenes destacadas de las publicaciones. Las líneas contrastantes que separan las diferentes partes del sitio web se ven sobrias y elegantes.
+
+ArtsyLens
+https://es.wordpress.org/themes/artsylens/
+Tema artístico con un diseño elegante y una funcionalidad increíble. Es perfecto para artistas, ilustradores, diseñadores, freelancers, fotógrafos y otros profesionales creativos
+
+
+Tove (mayo 2024)
+https://es.wordpress.org/themes/tove/ 
+Diseño lúdico y moderno. Originalmente orientado a cafés y sitios gastronómicos, pero fácilmente adaptable a cualquier rubro
+
+Blocksy (FSE version)
+https://es-ar.wordpress.org/themes/blocksy/
+Ligero y altamente personalizable, con soporte para WooCommerce y performance optimizada
+
+
+
+lista de temas FSE con patterns + estilos de bloques + editor de estilos
+https://es.wordpress.org/themes/tags/block-patterns+block-styles+full-site-editing+editor-style/

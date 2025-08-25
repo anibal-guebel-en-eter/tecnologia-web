@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Editor + FSE - Semana 3</title>
+  <link rel="icon" href="../img/logo_25.png" type="image/png">
+  <link rel="stylesheet" href="../clase-2/styles.css">
+  <script src="../clase-2/scripts.js" defer></script>
+</head>
+<body>
+
+  <main>
+    
+    <!-- Slide 1: Portada -->
+    <section id="slide-1" class="slide hero fade-in con-video">
+      <video src="AI/temasFSE.mp4" controls></video>
+      <div style="text-align: left !important; line-height: 1.25 !important;">
+        <span class="slide-counter">1/32</span>
+        <h2>Site Editor + Full Site Editing</h2>
+        <h1>Tecnología Web - Semana 3</h1>
+        <h3><strong>Comunicación y Marketing Digital</strong></h3>
+        <h4>Eter, Escuela de Comunicación</h4>
+      </div>
+    </section>
+
+    <!-- Slide 2: Repaso Rápido -->
+    <section id="slide-2" class="slide fade-in">
+      <span class="slide-counter">2/32</span>
+      <h2>Repaso Rápido</h2>
+      <h3>¿Qué dominamos de la semana pasada?</h3>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <p><span class="emoji">🧩</span>Editor Gutenberg dominado</p>
+        </div>
+        <div class="stat-card">
+          <p><span class="emoji">✨</span>Patrones implementados</p>
+        </div>
+        <div class="stat-card">
+          <p><span class="emoji">📱</span>Páginas responsive creadas</p>
+        </div>
+      </div>
+      <div class="success-box">
+        <p><span class="emoji">🚀</span><strong>Hoy damos el salto final: Control total del diseño del sitio</strong></p>
+      </div>
+    </section>
+
+    <!-- Slide 3: Preguntas Disparadoras -->
+    <section id="slide-3" class="slide fade-in" style="display: grid; align-content: space-between;">
+      <span class="slide-counter">3/32</span>
+      <h2>Preguntas Disparadoras</h2>
+      <div class="preguntas">
+        <p><span class="emoji">🏗️</span><strong>¿Cómo personalizar TODO el sitio, no solo el contenido?</strong></p>
+        <p><span class="emoji">🎨</span><strong>¿Qué es Full Site Editing y por qué es revolucionario?</strong></p>
+        <p><span class="emoji">⚡</span><strong>¿Cómo crear headers y footers únicos sin código?</strong></p>
+      </div>
+      <div class="warning-box" style="display: grid; place-items: center;">
+        <p style="margin: 0;"><em>[ ¿Qué limitaciones encontraron con Gutenberg? ]</em></p>
+      </div>
+    </section>
+
+    <!-- Slide 4: ¿Qué es Full Site Editing? -->
+    <section id="slide-4" class="slide fade-in">
+      <span class="slide-counter">4/32</span>
+      <h2>¿Qué es Full Site Editing?</h2>
+      <h3>La Evolución Final de WordPress</h3>
+      <div class="success-box">
+        <h4><span class="emoji">✨</span>Definición:</h4>
+        <p>Capacidad de editar TODAS las partes de un sitio web usando el mismo editor de bloques: headers, footers, páginas de archivo, plantillas, etc.</p>
+      </div>
+      <div class="resources-grid">
+        <div class="resource-card">
+          <h4><span class="emoji">🔧</span>Site Editor</h4>
+          <p>Interfaz unificada para todo el diseño del sitio</p>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">📐</span>Plantillas</h4>
+          <p>Control total sobre la estructura de cada tipo de página</p>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">🎨</span>Estilos Globales</h4>
+          <p>Colores, tipografías y espacios consistentes</p>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">🧩</span>Compatibilidad</h4>
+          <p>Mismo sistema de bloques que ya conocemos</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 5: Antes vs Después FSE -->
+    <section id="slide-5" class="slide fade-in">
+      <span class="slide-counter">5/32</span>
+      <h2>Antes vs Después</h2>
+      <h3>La Transformación del Desarrollo Web</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>WordPress Tradicional</th>
+            <th>WordPress FSE</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>🎨 Personalizador limitado</td>
+            <td>🏗️ Site Editor completo</td>
+          </tr>
+          <tr>
+            <td>📝 Solo contenido editable</td>
+            <td>✨ TODO es editable</td>
+          </tr>
+          <tr>
+            <td>🔒 Headers/footers fijos</td>
+            <td>🔄 Headers/footers dinámicos</td>
+          </tr>
+          <tr>
+            <td>💻 PHP necesario para cambios</td>
+            <td>🧩 Solo bloques visuales</td>
+          </tr>
+          <tr>
+            <td>⏰ Horas para personalización</td>
+            <td>⚡ Minutos para cambios</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Slide 6: Requisitos para FSE -->
+    <section id="slide-6" class="slide fade-in">
+      <span class="slide-counter">6/32</span>
+      <h2>Requisitos para FSE</h2>
+      <h3>¿Qué necesitamos?</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-year">1️⃣</div>
+          <p><strong>WordPress 5.9+:</strong> Versión mínima con FSE completo</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2️⃣</div>
+          <p><strong>Tema Compatible:</strong> Twenty Twenty-Five, Twenty Twenty-Four, etc.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">3️⃣</div>
+          <p><strong>theme.json:</strong> Archivo de configuración en el tema</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">💡</div>
+          <p><strong>Verificación:</strong> Apariencia → "Editor del sitio" disponible</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 7: Navegación del Site Editor -->
+    <section id="slide-7" class="slide fade-in">
+      <span class="slide-counter">7/32</span>
+      <h2>Navegación del Site Editor</h2>
+      <h3>Anatomía de la Nueva Interfaz</h3>
+      <div class="resources-grid">
+        <div class="resource-card">
+          <h4><span class="emoji">🏠</span>Panel Principal</h4>
+          <ul>
+            <li>Plantillas disponibles</li>
+            <li>Partes del tema</li>
+            <li>Patrones globales</li>
+          </ul>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">✏️</span>Editor Visual</h4>
+          <ul>
+            <li>Vista previa en vivo</li>
+            <li>Edición directa</li>
+            <li>Responsive integrado</li>
+          </ul>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">🎨</span>Panel de Estilos</h4>
+          <ul>
+            <li>Colores globales</li>
+            <li>Tipografías</li>
+            <li>Espaciados</li>
+          </ul>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">📱</span>Vista Responsive</h4>
+          <ul>
+            <li>Desktop</li>
+            <li>Tablet</li>
+            <li>Móvil</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 8: Demo Time -->
+    <section id="slide-8" class="slide fade-in">
+      <span class="slide-counter">8/32</span>
+      <h2><span style="display: block; line-height: 1; font-size: smaller; opacity: .7;">Demo Time</span>
+      Acceso al Site Editor</h2>
+      <div style="text-align: center; padding: 2rem;">
+        <p style="font-size: 2rem; margin-bottom: 1rem;"><span class="emoji">🚀</span><strong>Primeros pasos en el Site Editor</strong></p>
+      </div>
+      <div class="action-list">
+        <div class="action-item">
+          <span class="emoji">🔗</span>Acceder desde Apariencia → Editor del sitio
+        </div>
+        <div class="action-item">
+          <span class="emoji">👀</span>Explorar interfaz principal
+        </div>
+        <div class="action-item">
+          <span class="emoji">📐</span>Revisar plantillas disponibles
+        </div>
+        <div class="action-item">
+          <span class="emoji">🎨</span>Abrir panel de estilos globales
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 9: Sistema de Colores Global -->
+    <section id="slide-9" class="slide fade-in">
+      <span class="slide-counter">9/32</span>
+      <h2>Sistema de Colores Global</h2>
+      <h3>Identidad Visual Consistente</h3>
+      <div class="success-box">
+        <h4><span class="emoji">🎨</span>Paleta Global:</h4>
+        <p>Define una vez, aplica en todo el sitio. Los cambios se reflejan automáticamente en todo el contenido.</p>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h4>🎯 Primarios</h4>
+          <p>Marca, CTAs, elementos importantes</p>
+        </div>
+        <div class="stat-card">
+          <h4>🔗 Secundarios</h4>
+          <p>Enlaces, acentos, elementos decorativos</p>
+        </div>
+        <div class="stat-card">
+          <h4>📝 Texto</h4>
+          <p>Títulos, párrafos, texto auxiliar</p>
+        </div>
+        <div class="stat-card">
+          <h4>🖼️ Fondo</h4>
+          <p>Base, superficies, contenedores</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 10: Tipografías Corporativas -->
+    <section id="slide-10" class="slide fade-in">
+      <span class="slide-counter">10/32</span>
+      <h2>Tipografías Corporativas</h2>
+      <h3>Jerarquía Visual Profesional</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-year"><span class="emoji">🔤</span>Font Pairings</div>
+          <p>Combinaciones armoniosas entre títulos y párrafos</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year"><span class="emoji">📏</span>Escalas de Tamaño</div>
+          <p>H1 → H6 con proporciones matemáticamente correctas</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year"><span class="emoji">📱</span>Responsive Text</div>
+          <p>Tamaños que se adaptan automáticamente por dispositivo</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year"><span class="emoji">♿</span>Accesibilidad</div>
+          <p>Contraste y legibilidad garantizados</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 11: Espaciados y Layout -->
+    <section id="slide-11" class="slide fade-in">
+      <span class="slide-counter">11/32</span>
+      <h2>Espaciados y Layout</h2>
+      <h3>Ritmo Visual Consistente</h3>
+      <div class="resources-grid">
+        <div class="resource-card">
+          <h4><span class="emoji">📐</span>Espaciado Vertical</h4>
+          <p>Márgenes entre elementos y secciones</p>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">↔️</span>Espaciado Horizontal</h4>
+          <p>Padding interno y separación lateral</p>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">📊</span>Grillas</h4>
+          <p>Sistemas de columnas adaptativos</p>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">🎯</span>Contenedores</h4>
+          <p>Anchos máximos y alineaciones</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 12: Práctica Dirigida - Estilos Globales -->
+    <section id="slide-12" class="slide fade-in">
+      <span class="slide-counter">12/32</span>
+      <h2><span style="display: block; line-height: 1; font-size: smaller; opacity: .7;">Práctica Dirigida</span>
+      Configurar Identidad Visual</h2>
+      <div style="text-align: center; padding: 2rem;">
+        <p style="font-size: 1.5rem; margin-bottom: 2rem;"><span class="emoji">🎨</span><strong>"Crear paleta de marca en 10 minutos"</strong></p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-year">1</div>
+          <p>Definir color primario de marca</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2</div>
+          <p>Seleccionar colores complementarios</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">3</div>
+          <p>Configurar tipografías principales</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">4</div>
+          <p>Ajustar espaciados globales</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">5</div>
+          <p>Verificar resultado en vista previa</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 13: Headers Dinámicos -->
+    <section id="slide-13" class="slide fade-in">
+      <span class="slide-counter">13/32</span>
+      <h2>Headers Dinámicos</h2>
+      <h3>Navegación Profesional</h3>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h4>🏷️ Logo/Título</h4>
+          <p>Branding dinámico con enlaces</p>
+        </div>
+        <div class="stat-card">
+          <h4>🧭 Navegación</h4>
+          <p>Menús responsive automáticos</p>
+        </div>
+        <div class="stat-card">
+          <h4>🔍 Búsqueda</h4>
+          <p>Búsqueda integrada opcional</p>
+        </div>
+        <div class="stat-card">
+          <h4>🌐 Social</h4>
+          <p>Enlaces a redes sociales</p>
+        </div>
+        <div class="stat-card">
+          <h4>📱 Mobile Menu</h4>
+          <p>Hamburger menu automático</p>
+        </div>
+        <div class="stat-card">
+          <h4>🎨 Estilos</h4>
+          <p>Fondo, transparencia, sticky</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 14: Footers Informativos -->
+    <section id="slide-14" class="slide fade-in">
+      <span class="slide-counter">14/32</span>
+      <h2>Footers Informativos</h2>
+      <h3>Completar la Experiencia</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-year"><span class="emoji">📞</span>Contacto</div>
+          <p>Dirección, teléfono, email, horarios</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year"><span class="emoji">🔗</span>Enlaces</div>
+          <p>Navegación secundaria, sitemap</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year"><span class="emoji">📱</span>Redes Sociales</div>
+          <p>Icons con enlaces a perfiles</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year"><span class="emoji">⚖️</span>Legal</div>
+          <p>Políticas, términos, copyright</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year"><span class="emoji">📧</span>Newsletter</div>
+          <p>Suscripción integrada</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 15: Demo Headers y Footers -->
+    <section id="slide-15" class="slide fade-in">
+      <span class="slide-counter">15/32</span>
+      <h2><span style="display: block; line-height: 1; font-size: smaller; opacity: .7;">Demo Práctico</span>
+      Diseñar Header y Footer</h2>
+      <div style="text-align: center; padding: 2rem;">
+        <p style="font-size: 1.5rem; margin-bottom: 2rem;"><span class="emoji">🏗️</span><strong>"Estructura completa del sitio"</strong></p>
+      </div>
+      <div class="action-list">
+        <div class="action-item">
+          <span class="emoji">📝</span>Editar plantilla de header
+        </div>
+        <div class="action-item">
+          <span class="emoji">🎨</span>Personalizar elementos visuales
+        </div>
+        <div class="action-item">
+          <span class="emoji">🧭</span>Configurar menú de navegación
+        </div>
+        <div class="action-item">
+          <span class="emoji">📱</span>Optimizar para móvil
+        </div>
+        <div class="action-item">
+          <span class="emoji">🦶</span>Crear footer con información
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 16: Plantillas vs Patrones -->
+    <section id="slide-16" class="slide fade-in">
+      <span class="slide-counter">16/32</span>
+      <h2>Plantillas vs Patrones</h2>
+      <h3>Entender las Diferencias</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Plantillas (Templates)</th>
+            <th>Patrones (Patterns)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>🏗️ Estructura completa de página</td>
+            <td>🧩 Secciones de contenido</td>
+          </tr>
+          <tr>
+            <td>📐 Layout general (home, page, post)</td>
+            <td>✨ Componentes reutilizables</td>
+          </tr>
+          <tr>
+            <td>🔒 Una por tipo de contenido</td>
+            <td>🔄 Múltiples en una página</td>
+          </tr>
+          <tr>
+            <td>⚙️ Controla header/footer/sidebar</td>
+            <td>📝 Solo área de contenido</td>
+          </tr>
+          <tr>
+            <td>🎯 Aplica automáticamente</td>
+            <td>➕ Se insertan manualmente</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Slide 17: Tipos de Plantillas -->
+    <section id="slide-17" class="slide fade-in">
+      <span class="slide-counter">17/32</span>
+      <h2>Tipos de Plantillas</h2>
+      <h3>Arquitectura del Sitio</h3>
+      <div class="resources-grid">
+        <div class="resource-card">
+          <h4><span class="emoji">🏠</span>Homepage</h4>
+          <p>Plantilla principal del sitio</p>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">📄</span>Single Page</h4>
+          <p>Páginas individuales</p>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">📝</span>Single Post</h4>
+          <p>Entradas de blog individuales</p>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">📚</span>Archive</h4>
+          <p>Listados de contenido</p>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">🔍</span>Search</h4>
+          <p>Resultados de búsqueda</p>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">❌</span>404 Error</h4>
+          <p>Página de error personalizada</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 18: Personalizar Plantillas -->
+    <section id="slide-18" class="slide fade-in">
+      <span class="slide-counter">18/32</span>
+      <h2>Personalizar Plantillas</h2>
+      <h3>Crear Experiencias Únicas</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-year">1️⃣</div>
+          <p><strong>Seleccionar plantilla:</strong> Desde el Site Editor</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2️⃣</div>
+          <p><strong>Editar estructura:</strong> Agregar/quitar bloques</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">3️⃣</div>
+          <p><strong>Personalizar diseño:</strong> Colores, espacios, tipografía</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">4️⃣</div>
+          <p><strong>Vista previa:</strong> Verificar en diferentes dispositivos</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">5️⃣</div>
+          <p><strong>Guardar cambios:</strong> Aplicar a todo el sitio</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 19: Partes del Tema -->
+    <section id="slide-19" class="slide fade-in">
+      <span class="slide-counter">19/32</span>
+      <h2>Partes del Tema</h2>
+      <h3>Componentes Reutilizables</h3>
+      <div class="success-box">
+        <h4><span class="emoji">🧩</span>Template Parts:</h4>
+        <p>Secciones que se pueden usar en múltiples plantillas (headers, footers, sidebars personalizados)</p>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h4>🔄 Reutilización</h4>
+          <p>Una vez creado, usar en múltiples plantillas</p>
+        </div>
+        <div class="stat-card">
+          <h4>🔧 Mantenimiento</h4>
+          <p>Cambio una vez = actualización global</p>
+        </div>
+        <div class="stat-card">
+          <h4>🎨 Consistencia</h4>
+          <p>Diseño uniforme en todo el sitio</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 20: Práctica Individual -->
+    <section id="slide-20" class="slide fade-in">
+      <span class="slide-counter">20/32</span>
+      <h2>Práctica Individual</h2>
+      <h3>Crear Plantilla Personalizada</h3>
+      <div style="text-align: center; padding: 2rem;">
+        <p style="font-size: 1.5rem; margin-bottom: 2rem;"><span class="emoji">🎯</span><strong>"Mi página personalizada"</strong></p>
+      </div>
+      <div class="action-list">
+        <div class="action-item">
+          <span class="emoji">1️⃣</span>Elegir tipo de plantilla (página/post)
+        </div>
+        <div class="action-item">
+          <span class="emoji">2️⃣</span>Personalizar header específico
+        </div>
+        <div class="action-item">
+          <span class="emoji">3️⃣</span>Diseñar layout único
+        </div>
+        <div class="action-item">
+          <span class="emoji">4️⃣</span>Agregar elementos distintivos
+        </div>
+        <div class="action-item">
+          <span class="emoji">5️⃣</span>Verificar responsive
+        </div>
+      </div>
+      <div class="warning-box">
+        <p><span class="emoji">⏰</span><strong>Tiempo: 15 minutos</strong></p>
+      </div>
+    </section>
+
+    <!-- Slide 21: Query Loop -->
+    <section id="slide-21" class="slide fade-in">
+      <span class="slide-counter">21/32</span>
+      <h2>Query Loop</h2>
+      <h3>Contenido Dinámico Avanzado</h3>
+      <div class="success-box">
+        <h4><span class="emoji">🔄</span>Query Loop:</h4>
+        <p>Bloque que permite mostrar listados dinámicos de posts, páginas o contenido personalizado con filtros avanzados</p>
+      </div>
+      <div class="resources-grid">
+        <div class="resource-card">
+          <h4><span class="emoji">📝</span>Posts Recientes</h4>
+          <p>Últimas entradas del blog</p>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">🏷️</span>Por Categoría</h4>
+          <p>Contenido filtrado por tema</p>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">⭐</span>Destacados</h4>
+          <p>Posts marcados como importantes</p>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">📅</span>Por Fecha</h4>
+          <p>Rangos temporales específicos</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 22: Bloques de Navegación -->
+    <section id="slide-22" class="slide fade-in">
+      <span class="slide-counter">22/32</span>
+      <h2>Bloques de Navegación</h2>
+      <h3>Menús Dinámicos</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-year"><span class="emoji">📱</span>Responsive</div>
+          <p>Adaptación automática a móviles con hamburger menu</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year"><span class="emoji">🎨</span>Estilos</div>
+          <p>Personalización completa de apariencia y comportamiento</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year"><span class="emoji">📂</span>Submenús</div>
+          <p>Navegación jerárquica con dropdowns automáticos</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year"><span class="emoji">🔗</span>Enlaces Dinámicos</div>
+          <p>Actualización automática cuando cambian títulos</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 23: Modo Vista Previa -->
+    <section id="slide-23" class="slide fade-in">
+      <span class="slide-counter">23/32</span>
+      <h2>Modo Vista Previa</h2>
+      <h3>Verificar Antes de Publicar</h3>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h4>🖥️ Desktop</h4>
+          <p>Vista completa en pantallas grandes</p>
+        </div>
+        <div class="stat-card">
+          <h4>📱 Móvil</h4>
+          <p>Verificar adaptación responsive</p>
+        </div>
+        <div class="stat-card">
+          <h4>🔄 Interactividad</h4>
+          <p>Probar enlaces y navegación</p>
+        </div>
+        <div class="stat-card">
+          <h4>⚡ Performance</h4>
+          <p>Comprobar velocidad de carga</p>
+        </div>
+      </div>
+      <div class="warning-box">
+        <p><span class="emoji">💡</span><strong>Tip:</strong> Siempre verificar en móvil antes de publicar</p>
+      </div>
+    </section>
+
+    <!-- Slide 24: Gestión de Revisiones -->
+    <section id="slide-24" class="slide fade-in">
+      <span class="slide-counter">24/32</span>
+      <h2>Gestión de Revisiones</h2>
+      <h3>Control de Versiones Visual</h3>
+      <div class="success-box">
+        <h4><span class="emoji">💾</span>Sistema de Revisiones:</h4>
+        <p>WordPress guarda automáticamente cada cambio en plantillas, permitiendo restaurar versiones anteriores</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-year">1️⃣</div>
+          <p>Cada cambio se guarda automáticamente</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2️⃣</div>
+          <p>Comparar versiones visualmente</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">3️⃣</div>
+          <p>Restaurar versión anterior si es necesario</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">4️⃣</div>
+          <p>Historial completo de cambios</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 25: FSE para Marketing -->
+    <section id="slide-25" class="slide fade-in">
+      <span class="slide-counter">25/32</span>
+      <h2>FSE para Marketing</h2>
+      <h3>Aplicaciones Profesionales</h3>
+      <div class="resources-grid">
+        <div class="resource-card">
+          <h4><span class="emoji">🎯</span>Branding Consistente</h4>
+          <p>Colores y tipografías de marca en todo el sitio</p>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">📊</span>Landing Pages</h4>
+          <p>Plantillas específicas para campañas</p>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">🔄</span>A/B Testing</h4>
+          <p>Crear variantes rápidamente</p>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">📱</span>Mobile-First</h4>
+          <p>Optimización automática para móviles</p>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">⚡</span>Velocidad</h4>
+          <p>Cambios inmediatos sin desarrollador</p>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">🎨</span>Creatividad</h4>
+          <p>Libertad total de diseño</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 26: Casos de Uso Avanzados -->
+    <section id="slide-26" class="slide fade-in">
+      <span class="slide-counter">26/32</span>
+      <h2>Casos de Uso Avanzados</h2>
+      <h3>Más Allá de lo Básico</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-year"><span class="emoji">🏢</span>Sitios Corporativos</div>
+          <p>Headers con logos, menús complejos, footers informativos</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year"><span class="emoji">🛍️</span>E-commerce</div>
+          <p>Plantillas de producto, checkout personalizado</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year"><span class="emoji">📰</span>Medios/Blogs</div>
+          <p>Layouts editoriales, páginas de autor</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year"><span class="emoji">🎓</span>Educativo</div>
+          <p>Cursos, recursos, estructuras académicas</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year"><span class="emoji">🎨</span>Portafolios</div>
+          <p>Galerías, casos de estudio, presentaciones</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 27: Limitaciones y Consideraciones -->
+    <section id="slide-27" class="slide fade-in">
+      <span class="slide-counter">27/32</span>
+      <h2>Limitaciones y Consideraciones</h2>
+      <h3>Ser Realista con FSE</h3>
+      <div class="warning-box">
+        <h4><span class="emoji">⚠️</span>Puntos a Considerar:</h4>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h4>🎨 Dependencia del Tema</h4>
+          <p>No todos los temas son compatibles</p>
+        </div>
+        <div class="stat-card">
+          <h4>🧩 Curva de Aprendizaje</h4>
+          <p>Más complejo que Gutenberg básico</p>
+        </div>
+        <div class="stat-card">
+          <h4>⚡ Performance</h4>
+          <p>Más bloques = potencial lentitud</p>
+        </div>
+        <div class="stat-card">
+          <h4>🔧 Funcionalidades</h4>
+          <p>Algunas características requieren plugins</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 28: Troubleshooting FSE -->
+    <section id="slide-28" class="slide fade-in">
+      <span class="slide-counter">28/32</span>
+      <h2>Troubleshooting FSE</h2>
+      <h3>Problemas Comunes y Soluciones</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-year">❌</div>
+          <p><strong>Problema:</strong> "Editor del sitio" no aparece</p>
+          <p><strong>Solución:</strong> Verificar compatibilidad del tema activo</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">🔧</div>
+          <p><strong>Problema:</strong> Cambios no se ven en el frontend</p>
+          <p><strong>Solución:</strong> Limpiar caché y verificar guardado</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">📱</div>
+          <p><strong>Problema:</strong> Móvil no se ve bien</p>
+          <p><strong>Solución:</strong> Revisar configuraciones responsive por bloque</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">🎨</div>
+          <p><strong>Problema:</strong> Estilos no se aplican</p>
+          <p><strong>Solución:</strong> Verificar jerarquía de estilos globales</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 29: Ejercicio Final Integrador -->
+    <section id="slide-29" class="slide fade-in">
+      <span class="slide-counter">29/32</span>
+      <h2>Ejercicio Final Integrador</h2>
+      <h3>Sitio Completo con FSE</h3>
+      <div style="text-align: center; padding: 2rem;">
+        <p style="font-size: 1.5rem; margin-bottom: 2rem;"><span class="emoji">🚀</span><strong>"Mi sitio profesional completo"</strong></p>
+      </div>
+      <div class="action-list">
+        <div class="action-item">
+          <span class="emoji">🎨</span>Configurar identidad visual global
+        </div>
+        <div class="action-item">
+          <span class="emoji">🏗️</span>Personalizar header con navegación
+        </div>
+        <div class="action-item">
+          <span class="emoji">📄</span>Crear plantilla de página única
+        </div>
+        <div class="action-item">
+          <span class="emoji">🦶</span>Diseñar footer informativo
+        </div>
+        <div class="action-item">
+          <span class="emoji">📱</span>Verificar responsive completo
+        </div>
+      </div>
+      <div class="warning-box">
+        <p><span class="emoji">⏰</span><strong>Tiempo: 20 minutos</strong></p>
+      </div>
+    </section>
+
+    <!-- Slide 30: Próxima Semana -->
+    <section id="slide-30" class="slide fade-in">
+      <span class="slide-counter">30/32</span>
+      <h2>Próxima Semana</h2>
+      <h3>Vista Previa: Optimización y Performance</h3>
+      <div class="success-box">
+        <h4><span class="emoji">⚡</span>Tema: "Velocidad, SEO y Funcionalidades Esenciales"</h4>
+      </div>
+      <div class="resources-grid">
+        <div class="resource-card">
+          <h4><span class="emoji">🚀</span>Qué aprenderemos</h4>
+          <ul>
+            <li>Optimización de velocidad</li>
+            <li>SEO técnico básico</li>
+            <li>Plugins esenciales</li>
+            <li>Seguridad fundamental</li>
+          </ul>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">📝</span>Tarea para casa</h4>
+          <ul>
+            <li>Completar sitio con FSE</li>
+            <li>Crear 2 plantillas diferentes</li>
+            <li>Experimentar con Query Loop</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 31: Reflexión y Aprendizajes -->
+    <section id="slide-31" class="slide fade-in">
+      <span class="slide-counter">31/32</span>
+      <h2>Reflexión y Aprendizajes</h2>
+      <h3>¿Qué descubrimos hoy?</h3>
+      <div style="font-size: 1.25rem; line-height: 2;">
+        <div class="warning-box">
+          <p><span class="emoji">❓</span><strong>¿Cuál fue la funcionalidad de FSE que más te impresionó?</strong></p>
+        </div>
+        <div class="warning-box">
+          <p><span class="emoji">❓</span><strong>¿Cómo cambió tu percepción sobre personalizar WordPress?</strong></p>
+        </div>
+        <div class="warning-box">
+          <p><span class="emoji">❓</span><strong>¿Qué aplicación práctica le darías en tu área?</strong></p>
+        </div>
+      </div>
+      <div class="success-box">
+        <p><em>[Intercambio de experiencias y descubrimientos]</em></p>
+      </div>
+    </section>
+
+    <!-- Slide 32: ¡FSE Dominado! -->
+    <section id="slide-32" class="slide hero fade-in">
+      <span class="slide-counter">32/32</span>
+      <h2>¡Full Site Editing Dominado!</h2>
+      <h3>Tercer Hito Completado</h3>
+      <div style="font-size: 1.25rem; line-height: 1.8;">
+        <p><span class="emoji">🎉</span><strong>Ahora controlas TODO el diseño de WordPress</strong></p>
+        <p><span class="emoji">🏗️</span><strong>Headers, footers y plantillas ya no son un misterio</strong></p>
+        <p><span class="emoji">🎨</span><strong>La consistencia visual está a tu alcance</strong></p>
+        <p><span class="emoji">⚡</span><strong>La próxima semana: Optimización profesional</strong></p>
+      </div>
+      <div style="margin-top: 3rem;">
+        <h3>¿Preguntas finales sobre FSE?</h3>
+        <p style="margin-top: 2rem;"><strong>¡Nos vemos en la Semana 4!</strong></p>
+      </div>
+    </section>
+  </main>
+
+  <div class="slide-navigation-buttons">
+    <button class="nav-arrow prev" onclick="prevSlide()" aria-label="Slide anterior">&lt;</button>
+    <button class="nav-arrow next" onclick="nextSlide()" aria-label="Siguiente slide">&gt;</button>
+  </div>
+
+</body>
+</html>
