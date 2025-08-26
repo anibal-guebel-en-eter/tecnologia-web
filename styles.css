@@ -576,8 +576,9 @@ section {
 
     .presenta {
       font-weight: 700;
-      margin-block: 0.5em;
+      margin-block: 2em 0.5em;
       line-height: 1.25;
+      border-block-start: dotted 2px hsl(0 0% 50% / 50%);
      }
 
     .presenta::marker {
