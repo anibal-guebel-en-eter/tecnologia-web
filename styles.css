@@ -589,6 +589,8 @@ section {
     .link {
       font-size: smaller;
       text-wrap: balance;
+      line-height: 1.25;
+      margin-block-end: 0.5em;
     }
   }
 }
