@@ -14,12 +14,33 @@
   <main>
     <!-- Slide 1: Portada -->
     <section class="slide hero active" id="slide-1">
-      <div class="slide-content">
+
+      <div class="slide-content con-video">
+
+        <style>
+          video {
+            width: 100%;
+            height: auto;
+          }
+          .con-video {
+            @media (min-width: 1024px) {
+              display: grid;
+              gap: 5%;
+              grid-template-columns: 60% 35%;
+              justify-content: center;
+            }
+          }
+        </style>
+
         <div class="slide-counter">1 / 20</div>
-        <h2>WordPress: Optimización y Rendimiento</h2>
-        <h1>Tecnología Web - Semana 4</h1>
-        <h3><strong>Comunicación y Marketing Digital</strong></h3>
-        <h4>Eter, Escuela de Comunicación</h4>
+        <video src="optimizar-sitio-web.mp4" controls></video>
+        <div style="text-align: left !important; line-height: 1.25 !important;">
+          <h2>WordPress: Optimización y Rendimiento</h2>
+          <h1>Tecnología Web - Semana 4</h1>
+          <h3><strong>Comunicación y Marketing Digital</strong></h3>
+          <h4>Eter, Escuela de Comunicación</h4>
+        </div>
+
       </div>
     </section>
 
