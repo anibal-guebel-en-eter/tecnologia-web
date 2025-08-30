@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WordPress: Optimización y Rendimiento - Semana 4</title>
+  <link rel="stylesheet" href="../clase-1/styles.css">
+  <link rel="icon" href="../img/logo_25.png" type="image/png">
+  <script src="../clase-1/scripts.js" defer></script>
+</head>
+
+<body>
+  <main>
+    <!-- Slide 1: Portada -->
+    <section class="slide hero active" id="slide-1">
+      <div class="slide-content">
+        <div class="slide-counter">1 / 20</div>
+        <h2>WordPress: Optimización y Rendimiento</h2>
+        <h1>Tecnología Web - Semana 4</h1>
+        <h3><strong>Comunicación y Marketing Digital</strong></h3>
+        <h4>Eter, Escuela de Comunicación</h4>
+      </div>
+    </section>
+
+    <!-- Slide 2: Agenda -->
+    <section class="slide" id="slide-2">
+      <div class="slide-content">
+        <div class="slide-counter">2 / 20</div>
+        <h2><span class="emoji">📋</span>Agenda de la Clase</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">0:00 - 0:20</div>
+            <p><strong>Introducción:</strong> ¿Por qué importa la velocidad?</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">0:20 - 0:45</div>
+            <p><strong>Diagnóstico:</strong> Herramientas de medición</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">0:45 - 1:15</div>
+            <p><strong>Optimización:</strong> Técnicas fundamentales</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1:15 - 1:35</div>
+            <p><strong>Práctica:</strong> Implementación en WordPress</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1:35 - 1:50</div>
+            <p><strong>Q&A y Cierre:</strong> Dudas y próximos pasos</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 3: Preguntas disparadoras -->
+    <section class="slide" id="slide-3">
+      <div class="slide-content">
+        <div class="slide-counter">3 / 20</div>
+        <h2><span class="emoji">🤔</span>Preguntas Disparadoras</h2>
+        <div class="preguntas">
+          <p><span class="emoji">⏰</span>¿Cuánto tiempo esperas que cargue una página web?</p>
+          <p><span class="emoji">📱</span>¿Abandonarías un sitio si tarda más de 3 segundos?</p>
+          <p><span class="emoji">🛒</span>¿Cómo afecta la velocidad a las ventas online?</p>
+          <p><span class="emoji">🔍</span>¿Google penaliza los sitios lentos?</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 4: El impacto de la velocidad -->
+    <section class="slide" id="slide-4">
+      <div class="slide-content">
+        <div class="slide-counter">4 / 20</div>
+        <h2><span class="emoji">📊</span>El Impacto de la Velocidad</h2>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">53%</div>
+            <p>de usuarios abandonan sitios que tardan más de <strong>3 segundos</strong> en cargar</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">+32%</div>
+            <p>aumento en la <strong>tasa de rebote</strong> (usuarios que se van inmediatamente) por cada segundo adicional</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">1 seg</div>
+            <p>de retraso puede reducir las <strong>conversiones</strong> (ventas, registros, etc.) hasta un 7%</p>
+          </div>
+        </div>
+        <div class="warning-box">
+          <p style="margin-bottom: 0;"><strong>💡 Dato clave:</strong> Google considera la velocidad como factor de <strong>ranking</strong> (posicionamiento en búsquedas) desde 2010 (computadoras) y 2018 (móviles).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 5: Core Web Vitals -->
+    <section class="slide" id="slide-5">
+      <div class="slide-content">
+        <div class="slide-counter">5 / 20</div>
+        <h2><span class="emoji">🎯</span>Core Web Vitals</h2>
+        <h3>Las métricas que Google realmente valora</h3>
+        <div class="warning-box" style="margin-bottom: 1rem; background: rgba(255, 200, 0, 0.2); border-color: var(--warning-orange);">
+          <p><strong>⚠️ Solo en sitio publicado:</strong> Estas métricas solo se pueden medir cuando tu sitio esté en un servidor web, no en WP Studio local.</p>
+        </div>
+        <div class="stats-grid" style="width: 100%;">
+          <div class="stat-card">
+            <h4 style="color: var(--light-blue); margin-bottom: 1rem;">LCP - Largest Contentful Paint</h4>
+            <div class="stat-number" style="font-size: 1.8rem; color: var(--success-green);">< 2.5s</div>
+            <p>Tiempo para cargar el <strong>elemento visual más grande</strong> (imagen principal, texto, etc.)</p>
+          </div>
+          <div class="stat-card">
+            <h4 style="color: var(--light-blue); margin-bottom: 1rem;">FID - First Input Delay</h4>
+            <div class="stat-number" style="font-size: 1.8rem; color: var(--success-green);">< 100ms</div>
+            <p>Tiempo de respuesta al <strong>primer clic o toque</strong> del usuario</p>
+          </div>
+          <div class="stat-card">
+            <h4 style="color: var(--light-blue); margin-bottom: 1rem;">CLS - Cumulative Layout Shift</h4>
+            <div class="stat-number" style="font-size: 1.8rem; color: var(--success-green);">< 0.1</div>
+            <p><strong>Estabilidad visual</strong> - que el contenido no "salte" mientras carga</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 6: Herramientas de diagnóstico -->
+    <section class="slide" id="slide-6">
+      <div class="slide-content">
+        <div class="slide-counter">6 / 20</div>
+        <h2><span class="emoji">🔧</span>Herramientas de Diagnóstico</h2>
+        <div class="warning-box" style="margin-bottom: 1rem; background: rgba(255, 200, 0, 0.2); border-color: var(--warning-orange);">
+          <p style="margin-bottom: 0"><strong>⚠️ Importante:</strong> Estas herramientas solo funcionan con sitios publicados en internet, no con WP Studio local.</p>
+        </div>
+        <div class="resources-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+
+          <div class="resource-card" style="display: grid; align-content: space-between;">
+            <h4><span class="emoji">🚀</span>Google PageSpeed Insights</h4>
+            <p>Análisis <strong>gratuito</strong> con Core Web Vitals y sugerencias específicas. Es la herramienta oficial de Google.</p>
+            <div class="code-block"><a href="https://pagespeed.web.dev" target="_blank" rel="noopener noreferrer">pagespeed.web.dev</a></div>
+          </div>
+          <div class="resource-card" style="display: grid; align-content: space-between;">
+            <h4><span class="emoji">⚡</span>GTmetrix</h4>
+            <p>Análisis detallado con <strong>"waterfall"</strong> (gráfico que muestra cómo se carga cada elemento) y recomendaciones técnicas</p>
+            <div class="code-block"><a href="https://gtmetrix.com" target="_blank" rel="noopener noreferrer">gtmetrix.com</a></div>
+          </div>
+          <div class="resource-card" style="display: grid; align-content: space-between;">
+            <h4><span class="emoji">🔍</span>WebPageTest</h4>
+            <p>Testing desde múltiples <strong>ubicaciones geográficas</strong> y tipos de dispositivos</p>
+            <div class="code-block"><a href="https://webpagetest.org" target="_blank" rel="noopener noreferrer">webpagetest.org</a></div>
+          </div>
+          <div class="resource-card" style="display: grid; align-content: space-between;">
+            <h4><span class="emoji">🛠️</span>Chrome DevTools</h4>
+            <p><strong>Lighthouse</strong> integrado para análisis en tiempo real (funciona localmente pero con limitaciones)</p>
+            <div class="code-block">F12 → Lighthouse</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 7: Factores que afectan la velocidad -->
+    <section class="slide" id="slide-7">
+      <div class="slide-content">
+        <div class="slide-counter">7 / 20</div>
+        <h2><span class="emoji">🌐</span>¿Qué Ralentiza tu WordPress?</h2>
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Factor</th>
+              <th>Impacto</th>
+              <th>¿Funciona en WP Studio?</th>
+              <th>Solución</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Hosting</strong> de baja calidad</td>
+              <td style="color: var(--error-red);">Alto</td>
+              <td style="color: var(--error-red);">❌ Solo servidor</td>
+              <td>Hosting optimizado para WordPress</td>
+            </tr>
+            <tr>
+              <td><strong>Imágenes</strong> no optimizadas</td>
+              <td style="color: var(--error-red);">Alto</td>
+              <td style="color: var(--success-green);">✅ Sí funciona</td>
+              <td>Compresión + WebP + lazy loading</td>
+            </tr>
+            <tr>
+              <td><strong>Plugins</strong> innecesarios</td>
+              <td style="color: var(--warning-orange);">Medio</td>
+              <td style="color: var(--success-green);">✅ Sí funciona</td>
+              <td>Auditoría y limpieza regular</td>
+            </tr>
+            <tr>
+              <td><strong>Temas</strong> pesados</td>
+              <td style="color: var(--warning-orange);">Medio</td>
+              <td style="color: var(--success-green);">✅ Sí funciona</td>
+              <td>Temas ligeros o FSE</td>
+            </tr>
+            <tr>
+              <td><strong>Base de datos</strong> bloated</td>
+              <td style="color: var(--warning-orange);">Medio</td>
+              <td style="color: var(--success-green);">✅ Sí funciona</td>
+              <td>Limpieza y optimización DB</td>
+            </tr>
+            <tr>
+              <td>Sin <strong>caché</strong></td>
+              <td style="color: var(--error-red);">Alto</td>
+              <td style="color: var(--error-red);">❌ Solo servidor</td>
+              <td>Plugin de caché + CDN</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="success-box" style="margin-top: 1rem;">
+          <p><strong>💡 Para WP Studio:</strong> Enfócate en optimizar imágenes, elegir plugins ligeros y mantener la base de datos limpia.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 8: Optimización de imágenes -->
+    <section class="slide" id="slide-8">
+      <div class="slide-content">
+        <div class="slide-counter">8 / 20</div>
+        <h2><span class="emoji">🖼️</span>Optimización de Imágenes</h2>
+        <h3>El factor #1 de rendimiento web - ✅ <strong>Funciona en WP Studio</strong></h3>
+        
+        <div class="resources-grid" style="margin-bottom: 2rem;">
+
+          <div class="resource-card" style="border-top-color: var(--success-green); display: grid; align-content: space-between;">
+            <h4><span class="emoji">📱</span>Formato WebP</h4>
+            <p>25-30% más liviano que JPEG. <strong>Formato moderno</strong> soportado por todos los navegadores actuales.</p>
+          </div>
+          <div class="resource-card" style="border-top-color: var(--success-green); display: grid; align-content: space-between;">
+            <h4><span class="emoji">🗜️</span>Compresión Inteligente</h4>
+            <p>Reducir tamaño <strong>sin perder calidad visual</strong> usando algoritmos avanzados.</p>
+          </div>
+          <div class="resource-card" style="border-top-color: var(--success-green); display: grid; align-content: space-between;">
+            <h4><span class="emoji">⏳</span>Lazy Loading</h4>
+            <p>Cargar imágenes <strong>solo cuando el usuario las va a ver</strong> (al hacer scroll).</p>
+          </div>
+          <div class="resource-card" style="border-top-color: var(--success-green); display: grid; align-content: space-between;">
+            <h4><span class="emoji">📐</span>Responsive Images</h4>
+            <p>Diferentes <strong>tamaños según el dispositivo</strong> (móvil usa imagen más pequeña).</p>
+          </div>
+        </div>
+
+        <div class="warning-box" style="background: rgba(255, 200, 0, 0.2); border-color: var(--warning-orange);">
+          <p style="margin-bottom: 0;"><strong>🎯 Regla de oro:</strong> Nunca subas fotos directamente de tu cámara/celular. Una imagen de 5MB puede reducirse a 500KB sin diferencia visual.</p>
+        </div>
+
+        <div class="success-box">
+          <p><strong>💡 En WP Studio:</strong> Usa plugins como Smush o optimiza las imágenes antes de subirlas con herramientas online.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 9: Plugins de optimización recomendados -->
+    <section class="slide" id="slide-9">
+      <div class="slide-content">
+        <div class="slide-counter">9 / 20</div>
+        <h2><span class="emoji">🔌</span>Plugins de Optimización</h2>
+
+        <div class="warning-box" style="margin-bottom: 2rem;">
+          <p><strong>🔴 Para servidor remoto</strong> | <strong style="color: var(--success-green);">🟢 Funciona en WP Studio</strong></p>
+        </div>
+
+        <div class="resources-grid">
+          <div class="resource-card" style="border-top-color: var(--error-red);">
+            <h4><span class="emoji">⚡</span>WP Rocket 🔴</h4>
+            <p><strong>Premium</strong> - Caché completo, minificación, lazy loading. <em>Solo funciona en servidor web.</em></p>
+          </div>
+          <div class="resource-card" style="border-top-color: var(--error-red);">
+            <h4><span class="emoji">🚀</span>LiteSpeed Cache 🔴</h4>
+            <p><strong>Gratuito</strong> - Para servidores LiteSpeed. <em>Requiere servidor específico.</em></p>
+          </div>
+          <div class="resource-card" style="border-top-color: var(--success-green);">
+            <h4><span class="emoji">🔧</span>WP-Optimize 🟢</h4>
+            <p><strong>Freemium</strong> - Caché, compresión de imágenes, minimiza y limpia la base de datos. <em>¡Muy útil en desarrollo local!</em></p>
+          </div>
+          <div class="resource-card" style="border-top-color: var(--success-green);">
+            <h4><span class="emoji">🖼️</span>Smush 🟢</h4>
+            <p><strong>Freemium</strong> - Optimización automática de imágenes. <em>¡Funciona perfectamente en local!</em></p>
+          </div>
+          <div class="resource-card" style="border-top-color: var(--error-red);">
+            <h4><span class="emoji">📦</span>Autoptimize 🔴</h4>
+            <p><strong>Gratuito</strong> - Minificación CSS/JS. <em>Funciona localmente pero beneficios limitados.</em></p>
+          </div>
+          <div class="resource-card" style="border-top-color: var(--error-red);">
+            <h4><span class="emoji">☁️</span>Cloudflare 🔴</h4>
+            <p><strong>Gratuito</strong> - CDN y optimizaciones globales. <em>Solo para sitios publicados.</em></p>
+          </div>
+        </div>
+        
+        <div class="success-box">
+          <p><strong>💡 Para WP Studio:</strong> Instala Smush y WP-Optimize. Son los únicos que realmente te ayudarán en desarrollo local.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 10: Hosting y servidor -->
+    <section class="slide" id="slide-10">
+      <div class="slide-content">
+        <div class="slide-counter">10 / 20</div>
+        <h2><span class="emoji">🏠</span>Hosting: La Base del Rendimiento</h2>
+        <div class="warning-box" style="margin-bottom: 2rem; background: rgba(255, 200, 0, 0.2); border-color: var(--warning-orange);">
+          <p><strong>⚠️ Solo aplica cuando publiques:</strong> En WP Studio trabajas localmente, pero cuando exportes tu sitio necesitarás un hosting.</p>
+        </div>
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Tipo de Hosting</th>
+              <th>Velocidad</th>
+              <th>Precio mensual</th>
+              <th>Recomendado para</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Shared Hosting</strong><br><small>Compartes servidor con otros sitios</small></td>
+              <td style="color: var(--warning-orange);">Lento</td>
+              <td style="color: var(--success-green);">$3-10 USD</td>
+              <td>Blogs personales, sitios simples</td>
+            </tr>
+            <tr>
+              <td><strong>WordPress Managed</strong><br><small>Optimizado específicamente para WP</small></td>
+              <td style="color: var(--success-green);">Rápido</td>
+              <td style="color: var(--warning-orange);">$15-30 USD</td>
+              <td>Sitios comerciales, empresas</td>
+            </tr>
+            <tr>
+              <td><strong>VPS</strong><br><small>Servidor Virtual Privado</small></td>
+              <td style="color: var(--success-green);">Rápido</td>
+              <td style="color: var(--warning-orange);">$20-50 USD</td>
+              <td>Sitios con mucho tráfico</td>
+            </tr>
+            <tr>
+              <td><strong>Cloud Hosting</strong><br><small>Red de servidores distribuidos</small></td>
+              <td style="color: var(--success-green);">Muy Rápido</td>
+              <td style="color: var(--error-red);">$50+ USD</td>
+              <td>E-commerce, grandes empresas</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="warning-box">
+          <p><strong>⚠️ Importante:</strong> El hosting más barato suele ser el más caro a largo plazo por problemas de velocidad y caídas.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 11: CDN explicado -->
+    <section class="slide" id="slide-11">
+      <div class="slide-content">
+        <div class="slide-counter">11 / 20</div>
+        <h2><span class="emoji">🌐</span>CDN: Content Delivery Network</h2>
+        <h3>Acerca tu contenido al usuario - 🔴 <strong>Solo para sitios publicados</strong></h3>
+        
+        <div class="warning-box" style="margin-bottom: 0; background: rgba(255, 200, 0, 0.2); border-color: var(--warning-orange);">
+          <p style="margin-bottom: 0;"><strong>⚠️ No funciona en WP Studio:</strong> Los CDN solo funcionan cuando tu sitio está publicado en internet.</p>
+        </div>
+
+        <div class="diagram" style="margin-bottom: 0;">
+          <div class="box navigator">👤 Usuario en Buenos Aires</div>
+          <div class="arrow request">
+            <span>Solicitud <br>de imagen</span>
+          </div>
+          <div class="box server">📡 Servidor CDN Buenos Aires</div>
+          <div class="arrow response">
+            <span>Respuesta súper rápida<br>(50ms vs 500ms desde USA)</span>
+          </div>
+        </div>
+        
+        <h4 style="margin: 2rem 0 1rem 0; color: var(--light-blue);">¿Qué es un CDN?</h4>
+        <p style="font-size: 1.1rem; margin-bottom: 1rem;">Un <strong>CDN</strong> es una red de servidores distribuidos por el mundo que guardan copias de tus imágenes, videos y archivos. Cuando alguien visita tu sitio, el CDN le entrega el contenido desde el servidor más cercano.</p>
+        
+        <div class="stats-grid" style="margin-top: 2rem; width: 100%;">
+          <div class="stat-card">
+            <div class="stat-number">60%</div>
+            <p>reducción promedio en tiempo de carga</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">40%</div>
+            <p>reducción en uso de recursos del servidor</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 12: Caché explicado -->
+    <section class="slide" id="slide-12">
+      <div class="slide-content">
+        <div class="slide-counter">12 / 20</div>
+        <h2 style="margin-bottom: 0; line-height: 1;"><span class="emoji">💾</span>Sistema de Caché</h2>
+        <h3 style="margin-bottom: 0; line-height: 1;">Guardando copias para el futuro - 🔴 <strong>Solo para sitios publicados</strong></h3>
+        
+        <div class="warning-box" style="margin-bottom: 1rem; background: rgba(255, 200, 0, 0.2); border-color: var(--warning-orange);">
+          <p style="margin-bottom: 0;"><strong>⚠️ No funciona en WP Studio:</strong> El caché es útil cuando tienes visitantes reales. En desarrollo local no es necesario.</p>
+        </div>
+
+        <h4 style="color: var(--light-blue); margin-bottom: .5rem;">¿Qué es el caché?</h4>
+        <p style="font-size: 1.1rem; margin-bottom: 1rem;">El <strong>caché</strong> es como hacer fotocopias de las páginas de tu sitio web. En lugar de "crear" la página cada vez que alguien la visita (lento), se sirve la "fotocopia" ya lista (súper rápido).</p>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">Primera visita</div>
+            <p>WordPress <strong>genera</strong> la página consultando la base de datos, procesando PHP, etc. (3 segundos)</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">Caché creado</div>
+            <p>Se guarda una <strong>copia estática</strong> (HTML puro) de la página generada</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">Siguientes visitas</div>
+            <p>Se sirve la <strong>copia estática</strong> directamente (300 milisegundos)</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">Actualización</div>
+            <p>Al hacer cambios en el sitio, el caché <strong>se regenera automáticamente</strong></p>
+          </div>
+        </div>
+        <div class="success-box">
+          <p style="margin-bottom: 0;"><strong>💡 Resultado:</strong> De 3 segundos a 300 milisegundos de carga (10 veces más rápido).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 13: Base de datos -->
+    <section class="slide" id="slide-13">
+      <div class="slide-content">
+        <div class="slide-counter">13 / 20</div>
+
+        <h2 style="margin-bottom: 0;"><span class="emoji">🗄️</span>Optimización de Base de Datos</h2>
+        <h3>🟢 <strong>¡Muy importante en WP Studio!</strong></h3>
+
+        <div class="success-box" style="margin-bottom: 2rem;">
+          <p style="margin-bottom: 0;"><strong>✅ Funciona perfectamente en local:</strong> Mantener tu base de datos limpia es crucial tanto en desarrollo como en producción.</p>
+        </div>
+
+        <h4 style="color: var(--light-blue); margin-bottom: 1rem;">¿Qué es la base de datos?</h4>
+        <p style="font-size: 1.1rem; margin-bottom: 1rem;">La <strong>base de datos</strong> es donde WordPress guarda todo: tus posts, páginas, comentarios, configuraciones, etc. Con el tiempo se acumula "basura digital" que ralentiza todo.</p>
+
+        <div class="stats-grid" style="width: 100%;">
+          <div class="stat-card">
+            <h4 style="color: var(--light-blue);">Revisiones de posts</h4>
+            <p style="margin-bottom: 0;"><strong>Problema:</strong> WordPress guarda cada cambio que haces. <strong>Solución:</strong> Limitar a 3-5 revisiones por entrada.</p>
+          </div>
+          <div class="stat-card">
+            <h4 style="color: var(--light-blue);">Spam y papelera</h4>
+            <p style="margin-bottom: 0;"><strong>Problema:</strong> Comentarios spam y posts eliminados ocupan espacio. <strong>Solución:</strong> Limpiar regularmente.</p>
+          </div>
+          <div class="stat-card">
+            <h4 style="color: var(--light-blue);">Transients expirados</h4>
+            <p style="margin-bottom: 0;"><strong>Problema:</strong> Datos temporales que no se eliminan solos. <strong>Solución:</strong> Plugin de limpieza.</p>
+          </div>
+          <div class="stat-card">
+            <h4 style="color: var(--light-blue);">Tablas huérfanas</h4>
+            <p style="margin-bottom: 0;"><strong>Problema:</strong> Plugins eliminados dejan tablas. <strong>Solución:</strong> Limpieza con WP-Optimize.</p>
+          </div>
+        </div>
+
+        <div class="warning-box">
+          <p style="margin-bottom: 0;"><strong>🎯 Tip para WP Studio:</strong> Usa WP-Optimize cada semana para mantener tu base de datos local rápida y eficiente.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 14: Minificación y compresión -->
+    <section class="slide" id="slide-14">
+      <div class="slide-content">
+        <div class="slide-counter">14 / 20</div>
+        <h2><span class="emoji">📦</span>Minificación y Compresión</h2>
+        <h3>🟡 <strong>Funcionalidad limitada en WP Studio</strong></h3>
+
+        <div class="warning-box" style="margin-bottom: 2rem; background: rgba(255, 200, 0, 0.2); border-color: var(--warning-orange);">
+          <p style="margin-bottom: 0;"><strong>⚠️ Beneficios limitados en local:</strong> Estas técnicas son más efectivas cuando hay transferencia de datos real por internet.</p>
+        </div>
+
+        <h4 style="color: var(--light-blue); margin-bottom: 1rem;">¿Qué significan estos términos?</h4>
+        
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Técnica</th>
+              <th>Qué hace</th>
+              <th>Ejemplo</th>
+              <th>Ahorro típico</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Minificación CSS/JS</strong></td>
+              <td>Elimina espacios, saltos de línea y comentarios del código</td>
+              <td>De "color: red;" a "color:red"</td>
+              <td>20-40%</td>
+            </tr>
+            <tr>
+              <td><strong>Concatenación</strong></td>
+              <td>Une múltiples archivos CSS/JS en uno solo</td>
+              <td>10 archivos CSS → 1 archivo CSS</td>
+              <td>Reduce peticiones HTTP</td>
+            </tr>
+            <tr>
+              <td><strong>GZIP</strong></td>
+              <td>Comprime archivos como un ZIP antes de enviarlos</td>
+              <td>Archivo de 100KB → 30KB</td>
+              <td>60-80%</td>
+            </tr>
+            <tr>
+              <td><strong>Brotli</strong></td>
+              <td>Compresión más avanzada que GZIP</td>
+              <td>Mejor algoritmo de compresión</td>
+              <td>15-20% mejor que GZIP</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <div class="warning-box">
+          <p style="margin-bottom: 0;"><strong>⚠️ Cuidado:</strong> La sobre-optimización puede romper funcionalidades. Siempre hay que testear después de aplicar estos cambios.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 15: Lazy Loading -->
+    <section class="slide" id="slide-15">
+      <div class="slide-content">
+        <div class="slide-counter">15 / 20</div>
+        <h2 style="margin-bottom: 0;"><span class="emoji">⏳</span>Lazy Loading</h2>
+        <h3>Cargar solo lo que se necesita - 🟢 <strong>¡Funciona en WP Studio!</strong></h3>
+        
+        <div class="success-box" style="margin-bottom: 2rem;">
+          <p style="margin-bottom: 0;"><strong>✅ Perfectamente funcional en local:</strong> Esta técnica mejora la velocidad de carga inicial tanto en desarrollo como en producción.</p>
+        </div>
+
+        <div class="con-video">
+          <div>
+            <h4 style="color: var(--light-blue);">¿Cómo funciona el Lazy Loading?</h4>
+            <p style="font-size: 1.1rem; margin-bottom: 1rem;"><strong>Lazy Loading</strong> significa "carga perezosa". En lugar de cargar todas las imágenes de una página de una vez, solo carga las que el usuario puede ver. Las demás se cargan cuando el usuario hace scroll hacia abajo.</p>
+            
+            <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
+              <h5 style="color: var(--light-blue); margin-bottom: 0.5rem;">Proceso paso a paso:</h5>
+              <ul style="list-style: none; padding: 0;">
+                <li><strong>📱 Above the fold:</strong> Carga inmediata del contenido visible (lo que se ve sin hacer scroll)</li>
+                <li><strong>👀 Below the fold:</strong> Se carga cuando el usuario se acerca haciendo scroll</li>
+                <li><strong>🎯 Placeholders:</strong> Espacios reservados evitan que el contenido "salte"</li>
+                <li><strong>⚡ Detección automática:</strong> JavaScript moderno detecta cuándo cargar cada imagen</li>
+              </ul>
+            </div>
+            
+            <div class="success-box" style="margin-top: 1rem;">
+              <p style="margin-bottom: 0;"><strong>💡 Beneficio:</strong> Reduce el tiempo de carga inicial hasta un 50% y el consumo de datos móviles.</p>
+            </div>
+          </div>
+          <div style="text-align: center;">
+            <div class="code-block">
+              <!-- WordPress nativo (desde versión 5.5) -->
+              &lt;img src="mi-imagen.jpg"
+                   loading="lazy"
+                   alt="Descripción de la imagen"&gt;
+              
+              <!-- Se activa automáticamente en WordPress moderno -->
+            </div>
+            <p style="font-size: 0.9rem; color: var(--light-blue); margin-top: 1rem;"><strong>En WP Studio:</strong> WordPress ya incluye lazy loading por defecto. También puedes usar plugins como Smush para más control.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 16: Práctica - Configuración básica -->
+    <section class="slide" id="slide-16">
+      <div class="slide-content">
+        <div class="slide-counter">16 / 20</div>
+        <h2 style="margin-bottom: 0;"><span class="emoji">🛠️</span>Práctica: Setup Básico</h2>
+        <h3>¿Qué podemos hacer AHORA en WP Studio?</h3>
+        
+        <div class="action-list">
+          <div class="action-item" style="background: hsl(from var(--success-green) h s l / 20%); border-left: 4px solid var(--success-green);">
+            <span class="emoji">🖼️</span>
+            <span><strong>✅ Instalar Smush:</strong> Ve a Plugins → Añadir nuevo → Busca "Smush" → Instalar y activar</span>
+          </div>
+          <div class="action-item" style="background: hsl(from var(--success-green) h s l / 20%); border-left: 4px solid var(--success-green);">
+            <span class="emoji">🔧</span>
+            <span><strong>✅ Instalar WP-Optimize:</strong> Para limpiar tu base de datos local regularmente</span>
+          </div>
+          <div class="action-item" style="background: hsl(from var(--success-green) h s l / 20%); border-left: 4px solid var(--success-green);">
+            <span class="emoji">🎯</span>
+            <span><strong>✅ Elegir tema ligero:</strong> Evita temas "todo en uno" que vienen con muchas funciones</span>
+          </div>
+          <div class="action-item" style="background: hsl(from var(--success-green) h s l / 20%); border-left: 4px solid var(--success-green);">
+            <span class="emoji">📱</span>
+            <span><strong>✅ Optimizar imágenes:</strong> Antes de subir, redimensiona a máximo 1920px de ancho</span>
+          </div>
+          <div class="action-item" style="background: hsl(from var(--warning-orange) h s l / 20%); border-left: 4px solid var(--warning-orange);">
+            <span class="emoji">⏳</span>
+            <span><strong>⚠️ Para cuando publiques:</strong> Configurar hosting, CDN (Cloudflare), y plugins de caché</span>
+          </div>
+        </div>
+
+        <div class="success-box" style="margin-top: 2rem;">
+          <p style="margin-bottom: 0;"><strong>🎯 Meta inmediata:</strong> Implementar las optimizaciones locales ahora. Tu sitio ya estará preparado para cuando lo publiques.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 17: Métricas a monitorear -->
+    <section class="slide" id="slide-17">
+      <div class="slide-content">
+        <div class="slide-counter">17 / 20</div>
+        <h2 style="margin-bottom: 0; line-height: 1;"><span class="emoji">📈</span>Métricas Clave a Monitorear</h2>
+        <h3 style="margin-bottom: 0; line-height: 1;">¿Cómo medir el éxito cuando publiques tu sitio?</h3>
+        
+        <div class="warning-box" style="margin-bottom: 0; background: rgba(255, 200, 0, 0.2); border-color: var(--warning-orange);">
+          <p style="margin-bottom: 0;"><strong>⚠️ Solo para sitios publicados:</strong> Estas métricas solo se pueden medir cuando tu sitio esté en un servidor web real.</p>
+        </div>
+
+        <div class="action-list">
+          <div class="action-item" style="background: hsl(from var(--primary-blue) h s l / 70%); grid-column: 1 / -1; position: relative;">
+            <span class="emoji" style="position: absolute;">🎯</span>
+            <span><strong>Core Web Vitals (LCP, FID, CLS)</strong> - Se monitorean en Google Search Console (herramienta gratuita de Google)</span>
+          </div>
+          <div class="action-item">
+            <span class="emoji">⚡</span>
+            <span><strong>PageSpeed Score > 90</strong><br><small>Puntuación en Google PageSpeed Insights</small></span>
+          </div>
+          <div class="action-item">
+            <span class="emoji">📱</span>
+            <span><strong>Velocidad móvil < 3 segundos</strong><br><small>70% del tráfico web es móvil</small></span>
+          </div>
+          <div class="action-item">
+            <span class="emoji">💻</span>
+            <span><strong>Velocidad desktop < 2 segundos</strong><br><small>Tiempo de carga en computadoras</small></span>
+          </div>
+          <div class="action-item">
+            <span class="emoji">📊</span>
+            <span><strong>TTFB < 800ms</strong><br><small>Time To First Byte - respuesta del servidor</small></span>
+          </div>
+          <div class="action-item">
+            <span class="emoji">💾</span>
+            <span><strong>Cache hit ratio > 95%</strong><br><small>% de páginas servidas desde caché</small></span>
+          </div>
+        </div>
+
+        <div class="success-box" style="margin-top: 1rem;">
+          <p style="margin-bottom: 0;"><strong>🔍 Tip:</strong> Programa revisiones mensuales. El rendimiento se degrada con el tiempo por actualizaciones, nuevos plugins y contenido.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 18: Errores comunes -->
+    <section class="slide" id="slide-18">
+      <div class="slide-content">
+        <div class="slide-counter">18 / 20</div>
+        <h2 style="margin-bottom: 0;"><span class="emoji">⚠️</span>Errores Comunes que Evitar</h2>
+        <h3 style="margin-bottom: 0;">Aprende de los errores más frecuentes</h3>
+        
+        <div class="resources-grid">
+          <div class="resource-card" style="border-top-color: var(--error-red);">
+            <h4><span class="emoji">🚫</span>Múltiples plugins de caché</h4>
+            <p style="margin-bottom: 0;"><strong>Error:</strong> Instalar WP Rocket + LiteSpeed Cache juntos. <strong>Resultado:</strong> Conflictos y sitio más lento.</p>
+          </div>
+          <div class="resource-card" style="border-top-color: var(--error-red);">
+            <h4><span class="emoji">🖼️</span>Imágenes sin optimizar</h4>
+            <p style="margin-bottom: 0;"><strong>Error:</strong> Subir fotos de 5MB directamente del celular. <strong>Tip:</strong> Máximo 1920px de ancho y 500KB de peso.</p>
+          </div>
+          <div class="resource-card" style="border-top-color: var(--error-red);">
+            <h4><span class="emoji">🔌</span>Plugins "por si acaso"</h4>
+            <p style="margin-bottom: 0;"><strong>Error:</strong> Tener 50+ plugins activos "porque tal vez los necesite". <strong>Realidad:</strong> Cada plugin suma peso.</p>
+          </div>
+          <div class="resource-card" style="border-top-color: var(--error-red);">
+            <h4><span class="emoji">🎨</span>Temas "todo en uno"</h4>
+            <p style="margin-bottom: 0;"><strong>Error:</strong> Elegir temas con 200+ demos y funciones. <strong>Mejor:</strong> Temas específicos para tu tipo de sitio.</p>
+          </div>
+          <div class="resource-card" style="border-top-color: var(--error-red);">
+            <h4><span class="emoji">🔄</span>No limpiar caché</h4>
+            <p style="margin-bottom: 0;"><strong>Error:</strong> Hacer cambios y no ver resultados porque el caché no se actualiza. <strong>Solución:</strong> Aprender a limpiar caché.</p>
+          </div>
+          <div class="resource-card" style="border-top-color: var(--error-red);">
+            <h4><span class="emoji">📱</span>Ignorar la versión móvil</h4>
+            <p style="margin-bottom: 0;"><strong>Error:</strong> Solo optimizar para computadora. <strong>Realidad:</strong> 70% del tráfico web es desde móviles.</p>
+          </div>
+        </div>
+        
+        <div class="warning-box" style="margin-top: 2rem;">
+          <p style="margin-bottom: 0;"><strong>💡 Regla de oro:</strong> Menos es más. Un sitio simple y rápido supera siempre a uno complejo y lento.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 19: Recursos y herramientas -->
+    <section class="slide" id="slide-19">
+      <div class="slide-content">
+        <div class="slide-counter">19 / 20</div>
+        <h2><span class="emoji">🛠️</span>Kit de Herramientas del Optimizador</h2>
+        <h3>Tu caja de herramientas para optimización</h3>
+        
+        <div class="resources-grid">
+          <div class="resource-card">
+            <h4><span class="emoji">📊</span>Testing (🔴 Solo sitios publicados)</h4>
+            <ul style="list-style: none; padding: 0;">
+              <li>• <strong>PageSpeed Insights:</strong> Análisis oficial de Google</li>
+              <li>• <strong>GTmetrix:</strong> Análisis detallado con gráficos</li>
+              <li>• <strong>WebPageTest:</strong> Testing desde diferentes países</li>
+            </ul>
+          </div>
+          <div class="resource-card">
+            <h4><span class="emoji">🔌</span>Plugins para WP Studio (🟢)</h4>
+            <ul style="list-style: none; padding: 0;">
+              <li>• <strong>Smush:</strong> Optimización de imágenes</li>
+              <li>• <strong>WP-Optimize:</strong> Limpieza de base de datos</li>
+              <li>• <strong>Query Monitor:</strong> Detectar problemas de rendimiento</li>
+            </ul>
+          </div>
+          <div class="resource-card">
+            <h4><span class="emoji">☁️</span>Servicios para producción (🔴)</h4>
+            <ul style="list-style: none; padding: 0;">
+              <li>• <strong>Cloudflare:</strong> CDN gratuito y optimizaciones</li>
+              <li>• <strong>MaxCDN:</strong> CDN premium más rápido</li>
+              <li>• <strong>Amazon CloudFront:</strong> Para sitios grandes</li>
+            </ul>
+          </div>
+          <div class="resource-card">
+            <h4><span class="emoji">📚</span>Documentación y aprendizaje</h4>
+            <ul style="list-style: none; padding: 0;">
+              <li>• <strong>web.dev/fast:</strong> Guías oficiales de Google</li>
+              <li>• <strong>WordPress Codex:</strong> Documentación oficial WP</li>
+              <li>• <strong>YouTube:</strong> Canales especializados en WP</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="warning-box" style="margin-top: 2rem; background: rgba(0, 150, 255, 0.2); border-color: var(--light-blue);">
+          <p><strong>🎯 Meta realista:</strong> En WP Studio enfócate en imágenes y limpieza. Cuando publiques, apunta a PageSpeed Score > 90.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 20: Conclusiones y próximos pasos -->
+    <section class="slide" id="slide-20">
+      <div class="slide-content">
+        <div class="slide-counter">20 / 20</div>
+        <h2 style="margin-bottom: 0;"><span class="emoji">🎯</span>Conclusiones y Próximos Pasos</h2>
+        
+        <div class="stats-grid" style="width: 100%;">
+          <div class="stat-card">
+            <h3 style="color: var(--light-blue);"><span class="emoji">✅</span>Lo que Aprendimos Hoy</h3>
+            <ul style="list-style: none; padding: 0; text-align: left; margin-bottom: 0;">
+              <li>• <strong>Por qué importa la velocidad</strong> (conversiones, SEO, UX)</li>
+              <li>• <strong>Core Web Vitals</strong> y su impacto en Google</li>
+              <li>• <strong>Herramientas de medición</strong> para sitios publicados</li>
+              <li>• <strong>Qué funciona en WP Studio</strong> vs servidor remoto</li>
+              <li>• <strong>Técnicas prácticas</strong> de optimización</li>
+            </ul>
+          </div>
+          <div class="stat-card">
+            <h3 style="color: var(--light-blue);"><span class="emoji">🎯</span>Tarea para esta Semana</h3>
+            <ul style="list-style: none; padding: 0; text-align: left; margin-bottom: 0;">
+              <li>• <strong>Instalar WP-Optimize</strong> y limpiar BD</li>
+              <li>• <strong>Optimizar todas las imágenes</strong> de tu sitio</li>
+              <li>• <strong>Revisar plugins activos</strong> - eliminar innecesarios</li>
+              <li>• <strong>Documentar el proceso</strong> con screenshots</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="warning-box" style="margin: 1rem 0; background: rgba(0, 150, 255, 0.2); border-color: var(--light-blue);">
+          <p><strong>💡 Recordatorio importante:</strong> Todo lo que optimices ahora en WP Studio se mantendrá cuando exportes tu sitio. ¡Estás construyendo con buenas prácticas desde el principio!</p>
+        </div>
+        
+        <div class="action-list" style="margin: 1rem 0;">
+          <div class="action-item" style="background: hsl(from var(--success-green) h s l / 20%); border-left: 4px solid var(--success-green);">
+            <span class="emoji">🚀</span>
+            <p style="font-size: 1.1em;"><strong>Próxima semana:</strong><br>SEO Técnico + Rank Math<br>
+              Cómo hacer que Google encuentre y ame tu sitio</p>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- Navegación -->
+    <div class="slide-navigation-buttons">
+      <button class="nav-arrow prev" onclick="prevSlide()" disabled>‹</button>
+      <button class="nav-arrow next" onclick="nextSlide()">›</button>
+    </div>
+  </main>
+
+</body>
+
+</html>
