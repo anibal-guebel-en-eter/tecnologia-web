@@ -497,6 +497,7 @@ a[target="_blank"] {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
   margin: 2rem 0;
+  width: 100%;
 }
 
 .resource-card {
