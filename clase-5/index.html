@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entradas Personalizadas - Semana 5</title>
+  <link rel="stylesheet" href="../clase-2/styles.css">
+  <link rel="icon" href="../img/logo_25.png" type="image/png">
+  <script src="../clase-2/scripts.js" defer></script>
+</head>
+<body>
+
+  <main>
+
+    <!-- Slide 1: Portada -->
+    <section id="slide-1" class="slide hero fade-in con-video">
+      <span class="slide-counter">1/35</span>
+      <video src="video/Clay_animation_video_20250907.mp4" controls></video>
+      <div style="text-align: left !important; line-height: 1.25 !important;">
+        <h2>Entradas Personalizadas</h2>
+        <h1>Tecnología Web - Semana 5</h1>
+        <h3><strong>Comunicación y Marketing Digital</strong></h3>
+        <h4>Eter, Escuela de Comunicación</h4>
+      </div>
+    </section>
+
+    <!-- Slide 2: Recapitulación -->
+    <section id="slide-2" class="slide fade-in">
+      <span class="slide-counter">2/35</span>
+      <h2>Recapitulación del Módulo</h2>
+      <h3>Lo que dominamos hasta ahora</h3>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <p><span class="emoji">🏗️</span>WordPress Studio + Conceptos Web</p>
+        </div>
+        <div class="stat-card">
+          <p><span class="emoji">🧩</span>Gutenberg + Block Patterns</p>
+        </div>
+        <div class="stat-card">
+          <p><span class="emoji">🎨</span>Temas FSE + Personalización</p>
+        </div>
+        <div class="stat-card">
+          <p><span class="emoji">⚡</span>Optimización + Rendimiento</p>
+        </div>
+      </div>
+      <div class="success-box">
+        <p><span class="emoji">🎯</span><strong>Hoy: De blog básico a plataforma de marketing profesional</strong></p>
+      </div>
+    </section>
+
+    <!-- Slide 3: Pregunta Disparadora -->
+    <section id="slide-3" class="slide fade-in" style="display: grid; align-content: space-between;">
+      <span class="slide-counter">3/35</span>
+      <h2>Pregunta Disparadora</h2>
+      <div class="preguntas">
+        <p><span class="emoji">🤔</span><strong>¿Qué pasa cuando tu cliente necesita más que un blog?</strong></p>
+        <p><span class="emoji">💼</span><strong>¿Cómo mostrar casos de éxito, portfolios o productos?</strong></p>
+        <p><span class="emoji">🔧</span><strong>¿WordPress puede adaptarse a cualquier necesidad?</strong></p>
+      </div>
+      <div class="warning-box" style="display: grid; place-items: center;">
+        <p style="margin: 0;"><em>[ Compartimos experiencias reales de proyectos ]</em></p>
+      </div>
+    </section>
+
+    <!-- Slide 4: El Problema del Blog Tradicional -->
+    <section id="slide-4" class="slide fade-in">
+      <span class="slide-counter">4/35</span>
+      <h2>El Problema del Blog Tradicional</h2>
+      <h3>Limitaciones para Marketing</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-year">📝</div>
+          <strong>Entradas genéricas</strong> - Todo se ve igual: título, fecha, contenido
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">📂</div>
+          <strong>Categorías limitadas</strong> - Difícil organizar contenido especializado
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">📊</div>
+          <strong>Datos estructurados</strong> - Información importante se pierde en el texto
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">🎯</div>
+          <strong>Sin personalización</strong> - Una agencia necesita mostrar resultados, no solo escribir
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 5: Casos Reales de Agencias -->
+    <section id="slide-5" class="slide fade-in">
+      <span class="slide-counter">5/35</span>
+      <h2>Casos Reales de Agencias</h2>
+      <h3>¿Qué necesitan mostrar?</h3>
+      <div class="resources-grid">
+        <div class="resource-card">
+          <h4><span class="emoji">🏆</span>Casos de Éxito</h4>
+          <p>Cliente, problema, solución, resultados medibles</p>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">💼</span>Portfolio</h4>
+          <p>Proyectos con imágenes, tecnologías, testimonios</p>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">👥</span>Equipo</h4>
+          <p>Perfiles profesionales, especialidades, experiencia</p>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">📊</span>Recursos</h4>
+          <p>Ebooks, webinars, templates con metadatos</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 6: La Solución: Entradas Personalizadas -->
+    <section id="slide-6" class="slide fade-in">
+      <span class="slide-counter">6/35</span>
+      <h2>La Solución: Entradas Personalizadas</h2>
+      <h3>Custom Post Types</h3>
+      <div class="success-box">
+        <h4><span class="emoji">✨</span>Definición:</h4>
+        <p>Tipos de contenido específicos con campos y estructuras únicas para cada necesidad</p>
+      </div>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Blog Tradicional</th>
+            <th>Entradas Personalizadas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>📝 Solo "Posts"</td>
+            <td>🎯 Casos, Portfolio, Productos</td>
+          </tr>
+          <tr>
+            <td>📄 Todos iguales</td>
+            <td>🔧 Cada tipo único</td>
+          </tr>
+          <tr>
+            <td>📂 Categorías básicas</td>
+            <td>🏷️ Taxonomías específicas</td>
+          </tr>
+          <tr>
+            <td>✍️ Solo texto</td>
+            <td>📊 Campos personalizados</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Slide 7: Ejemplo Práctico -->
+    <section id="slide-7" class="slide fade-in">
+      <span class="slide-counter">7/35</span>
+      <h2>Ejemplo Práctico</h2>
+      <h3>Agencia de Marketing B2B</h3>
+      <div class="stats-grid" style="width: 100%;">
+        <div class="stat-card">
+          <h3>🏆 Casos de Éxito</h3>
+          <ul>
+            <li>Nombre del Cliente</li>
+            <li>Industria</li>
+            <li>Reto Inicial</li>
+            <li>Solución Implementada</li>
+            <li>Resultados (editor de bloques)</li>
+            <li>Logo del Cliente</li>
+          </ul>
+        </div>
+        <div class="stat-card">
+          <h3>🏷️ Taxonomías</h3>
+          <ul>
+            <li><strong>Servicios:</strong> SEO, PPC, Content</li>
+            <li><strong>Sectores:</strong> Tech, Finance, Retail</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 8: Herramientas Necesarias -->
+    <section id="slide-8" class="slide fade-in">
+      <span class="slide-counter">8/35</span>
+      <div>
+        <h2 style="margin: 0; line-height: 1;">Herramientas Necesarias</h2>
+        <h3 style="margin: 0; line-height: 1;">Nuestro Stack de Trabajo</h3>
+      </div>
+
+      <div class="action-list">
+        <div class="action-item">
+          <div>
+            <span class="emoji">🎨</span><strong>Tema Ollie</strong>
+          </div>
+          <br>FSE moderno y versátil
+        </div>
+        <div class="action-item">
+          <div>
+            <span class="emoji">🔧</span><strong>Plugin SCF</strong>
+          </div>
+          <br>Secure Custom Fields (gratuito)
+        </div>
+        <div class="action-item">
+          <div>
+            <span class="emoji">🧱</span><strong>GenerateBlocks</strong>
+          </div>
+          <br>Constructor de bloques avanzado
+        </div>
+        <div class="action-item">
+          <div>
+            <span class="emoji">💾</span><strong>Contenido listo</strong>
+          </div>
+          <br>Casos y entradas preparadas
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 9: Fase 1 - Preparación -->
+    <section id="slide-9" class="slide fade-in">
+      <span class="slide-counter">9/35</span>
+      <h2><span style="display: block; line-height: 1; font-size: smaller; opacity: .7;">Fase 1: Preparación (15 min)</span>
+      Configurando el Entorno</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-year">1</div>
+          <p><strong>Instalar tema Ollie</strong> - Apariencia → Temas → Añadir nuevo</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2</div>
+          <p><strong>Plugin SCF</strong> - Secure Custom Fields (verificar activación)</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">3</div>
+          <p><strong>Plugin GenerateBlocks</strong> - Para diseñar las plantillas</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">4</div>
+          <p><strong>Verificar funcionamiento</strong> - Todos los plugins activos</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 10: Demo - Instalación -->
+    <section id="slide-10" class="slide fade-in">
+      <span class="slide-counter">10/35</span>
+      <h2><span style="display: block; line-height: 1; font-size: smaller; opacity: .7;">Demo en Vivo</span>
+      Instalación de Herramientas</h2>
+      <div style="text-align: center; padding: 2rem;">
+        <p style="font-size: 2rem; margin-bottom: 1rem;"><span class="emoji">🚀</span><strong>Preparamos el entorno de trabajo</strong></p>
+      </div>
+      <div class="action-list">
+        <div class="action-item">
+          <span class="emoji">▶️</span>Acceder al Admin de WordPress
+        </div>
+        <div class="action-item">
+          <span class="emoji">🎨</span>Instalar y activar tema Ollie
+        </div>
+        <div class="action-item">
+          <span class="emoji">🔧</span>Añadir plugin SCF
+        </div>
+        <div class="action-item">
+          <span class="emoji">🧱</span>Instalar GenerateBlocks
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 11: Fase 2 - Contenido Básico -->
+    <section id="slide-11" class="slide fade-in">
+      <span class="slide-counter">11/35</span>
+      <h2><span style="display: block; line-height: 1; font-size: smaller; opacity: .7;">Fase 2: Contenido (25 min)</span>
+      Cargando Entradas Tradicionales</h2>
+      <div class="resources-grid">
+        <div class="resource-card">
+          <h4><span class="emoji">📝</span>6 Entradas de Blog</h4>
+          <ul>
+            <li>SEO 2025</li>
+            <li>Calendario Editorial</li>
+            <li>Email Marketing</li>
+            <li>PPC vs Social Ads</li>
+            <li>E-commerce UX</li>
+            <li>Branding Básico</li>
+          </ul>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">⚙️</span>Configuraciones</h4>
+          <ul>
+            <li>Categorías por tema</li>
+            <li>Imágenes destacadas</li>
+            <li>Extractos optimizados</li>
+            <li>Ajustar loop del blog</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 12: Qué son los Custom Post Types -->
+    <section id="slide-12" class="slide fade-in">
+      <span class="slide-counter">12/35</span>
+      <div>
+        <h2 style="margin: 0; line-height: 1;">¿Qué son los Custom Post Types?</h2>
+        <h3 style="margin: 0; line-height: 1;">Más allá de Posts y Páginas</h3>
+      </div>
+      <div class="success-box">
+        <h4><span class="emoji">🔍</span>WordPress por defecto tiene:</h4>
+        <p>Posts (blog), Páginas (estáticas), Medios (imágenes), Usuarios, Comentarios</p>
+      </div>
+      <div class="warning-box">
+        <h4><span class="emoji">⚡</span>Con Custom Post Types podemos crear:</h4>
+        <p>Productos, Eventos, Testimonios, Portfolio, Casos de Éxito, Servicios, Equipo...</p>
+      </div>
+      <div class="stats-grid" style="width: 100%;">
+        <div class="stat-card">
+          <h4>📊 Ventajas</h4>
+          <ul>
+            <li>Contenido específico</li>
+            <li>URLs organizadas</li>
+            <li>Administración separada</li>
+          </ul>
+        </div>
+        <div class="stat-card">
+          <h4>🎯 Casos de Uso</h4>
+          <ul>
+            <li>Sitios corporativos</li>
+            <li>Portfolios creativos</li>
+            <li>E-commerce básico</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 13: Custom Fields -->
+    <section id="slide-13" class="slide fade-in">
+      <span class="slide-counter">13/35</span>
+      <h2 style="margin: 0; line-height: 1;">Custom Fields (Campos Personalizados)</h2>
+      <h3 style="line-height: 1;">La Información Estructurada</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-year">📝</div>
+          <p><strong>Campo de Texto:</strong> Nombres, URLs, descripciones cortas</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">📄</div>
+          <p><strong>Editor WYSIWYG:</strong> Contenido enriquecido con formato</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">🖼️</div>
+          <p><strong>Campo de Imagen:</strong> Logos, fotos, screenshots</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">📊</div>
+          <p><strong>Otros tipos:</strong> Fecha, número, checkbox, select, URL</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 14: Taxonomías Personalizadas -->
+    <section id="slide-14" class="slide fade-in">
+      <span class="slide-counter">14/35</span>
+      <h2>Taxonomías Personalizadas</h2>
+      <h3>Organización Inteligente</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Jerárquicas</th>
+            <th>No Jerárquicas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>🌳 Como categorías</td>
+            <td>🏷️ Como etiquetas</td>
+          </tr>
+          <tr>
+            <td>📁 Pueden tener hijos</td>
+            <td>📋 Lista plana</td>
+          </tr>
+          <tr>
+            <td><strong>Ejemplo:</strong> Servicios<br>- SEO<br>&nbsp;&nbsp;- SEO Local<br>&nbsp;&nbsp;- SEO E-commerce</td>
+            <td><strong>Ejemplo:</strong> Sectores<br>- Tecnología<br>- Finanzas<br>- Retail</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Slide 15: Plugin SCF -->
+    <section id="slide-15" class="slide fade-in">
+      <span class="slide-counter">15/35</span>
+      <h2>Plugin SCF (Secure Custom Fields)</h2>
+      <h3>¿Por qué elegimos SCF?</h3>
+      <div class="resources-grid">
+        <div class="resource-card">
+          <h4><span class="emoji">🆓</span>Gratuito</h4>
+          <p>Sin limitaciones en la versión gratuita</p>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">🎯</span>Simple</h4>
+          <p>Interfaz intuitiva, fácil de usar</p>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">🔧</span>Potente</h4>
+          <p>Todos los tipos de campos necesarios</p>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">🧱</span>Compatible</h4>
+          <p>Funciona perfecto con FSE y Gutenberg</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 16: Demo - Crear Custom Post Type -->
+    <section id="slide-16" class="slide fade-in">
+      <span class="slide-counter">16/35</span>
+      <h2><span style="display: block; line-height: 1; font-size: smaller; opacity: .7;">Demo en Vivo</span>
+      Crear "Caso de Éxito"</h2>
+      <div style="text-align: center; padding-block: 0 1rem;">
+        <p style="font-size: 1.5rem; margin-bottom: 1rem;"><span class="emoji">🏆</span><strong>Nuestro primer Custom Post Type</strong></p>
+      </div>
+      <div class="action-list">
+        <div class="action-item">
+          <span class="emoji">⚙️</span>SCF → Custom Post Type
+        </div>
+        <div class="action-item">
+          <span class="emoji">📝</span>Nombre: "Caso de Éxito"
+        </div>
+        <div class="action-item">
+          <span class="emoji">🔗</span>Slug: "caso_exito"
+        </div>
+        <div class="action-item">
+          <span class="emoji">✅</span>Configurar opciones básicas
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 17: Demo - Taxonomías -->
+    <section id="slide-17" class="slide fade-in">
+      <span class="slide-counter">17/35</span>
+      <h2><span style="display: block; line-height: 1; font-size: smaller; opacity: .7;">Continuamos Demo</span>
+      Crear Taxonomías</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-year">1️⃣</div>
+          <p><strong>Servicios (Jerárquica)</strong></p>
+          <p>SEO, PPC, Marketing de Contenidos, Email Marketing</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2️⃣</div>
+          <p><strong>Sectores (No jerárquica)</strong></p>
+          <p>Tecnología, Finanzas, Retail, Logística, Alimentación</p>
+        </div>
+      </div>
+      <div class="warning-box">
+        <p><span class="emoji">💡</span><strong>Recordatorio:</strong> Asociar las taxonomías al Custom Post Type "Caso de Éxito"</p>
+      </div>
+    </section>
+
+    <!-- Slide 18: Fase 3 - Custom Fields -->
+    <section id="slide-18" class="slide fade-in">
+      <span class="slide-counter">18/35</span>
+      <h2><span style="display: block; line-height: 1; font-size: smaller; opacity: .7;">Fase 3: Campos (25 min)</span>
+      Creando el Editor Personalizado</h2>
+      <div class="resources-grid">
+        <div class="resource-card" style="grid-column: span 2;">
+          <h4><span class="emoji">📋</span>Grupo de Campos: "Datos del Caso de Éxito"</h4>
+          <ul>
+            <li><strong>Nombre del Cliente</strong> (Texto)</li>
+            <li><strong>Industria</strong> (Texto)</li>
+            <li><strong>Reto Inicial</strong> (Texto)</li>
+            <li><strong>Solución Implementada</strong> (Texto)</li>
+            <li><strong>Resultados Clave</strong> (Editor WYSIWYG)</li>
+            <li><strong>Logo del Cliente</strong> (Imagen)</li>
+            <li><strong>Resumen del Caso</strong> (Texto)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 19: Demo - Custom Fields -->
+    <section id="slide-19" class="slide fade-in">
+      <span class="slide-counter">19/35</span>
+      <h2><span style="display: block; line-height: 1; font-size: smaller; opacity: .7;">Demo en Vivo</span>
+      Configurando Custom Fields</h2>
+      <div style="text-align: center; padding-block: 0 1rem;">
+        <p style="font-size: 1.5rem; margin-bottom: 1rem;"><span class="emoji">🔧</span><strong>El corazón de nuestras entradas personalizadas</strong></p>
+      </div>
+      <div class="action-list">
+        <div class="action-item">
+          <span class="emoji">➕</span>SCF → Field Groups → Add New
+        </div>
+        <div class="action-item">
+          <span class="emoji">📋</span>Crear grupo "Datos del Caso"
+        </div>
+        <div class="action-item">
+          <span class="emoji">🔧</span>Añadir los 7 campos
+        </div>
+        <div class="action-item">
+          <span class="emoji">🎯</span>Location: Custom Post Type
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 20: Carga de Datos -->
+    <section id="slide-20" class="slide fade-in">
+      <span class="slide-counter">20/35</span>
+      <h2 style="margin: 0; line-height: 1;">Carga de Datos</h2>
+      <h3 style="margin: 0; line-height: 1;">6 Casos de Éxito Listos</h3>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h4>🚀 Tech Solutions Inc.</h4>
+          <p>+250% crecimiento en ventas</p>
+        </div>
+        <div class="stat-card">
+          <h4>🥗 Green Food Market</h4>
+          <p>Fidelización vía redes sociales</p>
+        </div>
+        <div class="stat-card">
+          <h4>💼 Finance Plus</h4>
+          <p>Automatización de email marketing</p>
+        </div>
+        <div class="stat-card">
+          <h4>🚛 Global Logistics</h4>
+          <p>Expansión a mercados internacionales</p>
+        </div>
+        <div class="stat-card">
+          <h4>👗 Fashion Trends</h4>
+          <p>UX optimizada para e-commerce</p>
+        </div>
+        <div class="stat-card">
+          <h4>🥖 Artisanal Bakery</h4>
+          <p>Identidad de marca sólida</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 21: Actividad Práctica 1 -->
+    <section id="slide-21" class="slide fade-in">
+      <span class="slide-counter">21/35</span>
+      <h2><span style="display: block; line-height: 1; font-size: smaller; opacity: .7;">Práctica Individual</span>
+      Cargar los Casos de Éxito</h2>
+      <div style="text-align: center; padding-block: 0 1rem;">
+        <p style="font-size: 1.5rem; margin-bottom: 1rem;"><span class="emoji">💪</span><strong>¡Manos a la obra! - 15 minutos</strong></p>
+      </div>
+      <div class="action-list">
+        <div class="action-item">
+          <span class="emoji">📄</span>Abrir archivo casos.html
+        </div>
+        <div class="action-item">
+          <span class="emoji">➕</span>Crear nuevo Caso de Éxito
+        </div>
+        <div class="action-item">
+          <span class="emoji">✏️</span>Copiar datos del primer caso
+        </div>
+        <div class="action-item">
+          <span class="emoji">🔄</span>Repetir para los 6 casos
+        </div>
+        <div class="action-item">
+          <span class="emoji">🏷️</span>Asignar taxonomías correctas
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 22: Fase 4 - Plantillas FSE -->
+    <section id="slide-22" class="slide fade-in">
+      <span class="slide-counter">22/35</span>
+      <h2><span style="display: block; line-height: 1; font-size: smaller; opacity: .7;">Fase 4: Plantillas FSE (45 min)</span>
+      Diseñando la Vista</h2>
+      <div class="success-box">
+        <h4><span class="emoji">🎨</span>Necesitamos crear:</h4>
+        <ul>
+          <li><strong>Single:</strong> Vista individual de cada caso</li>
+          <li><strong>Archive:</strong> Lista de todos los casos</li>
+        </ul>
+      </div>
+      <div class="resources-grid">
+        <div class="resource-card">
+          <h4><span class="emoji">🧱</span>GenerateBlocks</h4>
+          <p>Containers, botones, elementos avanzados</p>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">🔗</span>Dynamic Data</h4>
+          <p>Conectar campos personalizados a la vista</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 23: Plantilla Single -->
+    <section id="slide-23" class="slide fade-in">
+      <span class="slide-counter">23/35</span>
+      <h2>Plantilla Single</h2>
+      <h3>Vista Individual del Caso</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-year">1</div>
+          <p>Editor del Tema → Templates → Add New</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2</div>
+          <p>Seleccionar "Single Caso de Éxito"</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">3</div>
+          <p>Usar GenerateBlocks Container como estructura</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">4</div>
+          <p>Dynamic Data para conectar campos</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 24: Demo - Plantilla Single -->
+    <section id="slide-24" class="slide fade-in">
+      <span class="slide-counter">24/35</span>
+      <h2><span style="display: block; line-height: 1; font-size: smaller; opacity: .7;">Demo en Vivo</span>
+      Creando la Vista Individual</h2>
+      <div style="text-align: center; padding-block: 0 1rem;">
+        <p style="font-size: 1.5rem; margin-bottom: 1rem;"><span class="emoji">🎨</span><strong>Diseño profesional para cada caso</strong></p>
+      </div>
+      <div class="action-list">
+        <div class="action-item">
+          <span class="emoji">🏗️</span>Estructura con Container
+        </div>
+        <div class="action-item">
+          <span class="emoji">📊</span>Dynamic Data para campos
+        </div>
+        <div class="action-item">
+          <span class="emoji">🖼️</span>Logo + datos del cliente
+        </div>
+        <div class="action-item">
+          <span class="emoji">📈</span>Resultados destacados
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 25: Plantilla Archive -->
+    <section id="slide-25" class="slide fade-in">
+      <span class="slide-counter">25/35</span>
+      <h2>Plantilla Archive</h2>
+      <h3>Lista de Casos de Éxito</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-year">1</div>
+          <p>Templates → Add New → Archive Caso de Éxito</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2</div>
+          <p>Query Loop Block para mostrar múltiples casos</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">3</div>
+          <p>Filtro: solo Custom Post Type "caso_exito"</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">4</div>
+          <p>Card design con logo, título y resumen</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 26: Demo - Plantilla Archive -->
+    <section id="slide-26" class="slide fade-in">
+      <span class="slide-counter">26/35</span>
+      <h2><span style="display: block; line-height: 1; font-size: smaller; opacity: .7;">Demo en Vivo</span>
+      Lista de Casos</h2>
+      <div style="text-align: center; padding-block: 0 1rem;">
+        <p style="font-size: 1.5rem; margin-bottom: 1rem;"><span class="emoji">📋</span><strong>Galería profesional de casos de éxito</strong></p>
+      </div>
+      <div class="action-list">
+        <div class="action-item">
+          <span class="emoji">🔄</span>Query Loop configurado
+        </div>
+        <div class="action-item">
+          <span class="emoji">🎴</span>Cards con Container
+        </div>
+        <div class="action-item">
+          <span class="emoji">🔗</span>Enlaces a vista individual
+        </div>
+        <div class="action-item">
+          <span class="emoji">📱</span>Diseño responsive
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 27: Actividad Práctica 2 -->
+    <section id="slide-27" class="slide fade-in">
+      <span class="slide-counter">27/35</span>
+      <h2><span style="display: block; line-height: 1; font-size: smaller; opacity: .7;">Práctica Individual</span>
+      Personalizar las Plantillas</h2>
+      <div style="text-align: center; padding-block: 0 1rem;">
+        <p style="font-size: 1.5rem; margin-bottom: 1rem;"><span class="emoji">🎯</span><strong>Hacer tuyo el diseño - 20 minutos</strong></p>
+      </div>
+      <div class="action-list">
+        <div class="action-item">
+          <span class="emoji">🎨</span>Ajustar colores de marca
+        </div>
+        <div class="action-item">
+          <span class="emoji">📐</span>Espaciados y tipografías
+        </div>
+        <div class="action-item">
+          <span class="emoji">🔍</span>Probar vista individual
+        </div>
+        <div class="action-item">
+          <span class="emoji">📱</span>Verificar responsive
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 28: URLs y Navegación -->
+    <section id="slide-28" class="slide fade-in">
+      <span class="slide-counter">28/35</span>
+      <h2>URLs y Navegación</h2>
+      <h3>SEO y Usabilidad</h3>
+      <div class="resources-grid">
+        <div class="resource-card">
+          <h4><span class="emoji">🔗</span>Estructura de URLs</h4>
+          <ul>
+            <li><strong>Archive:</strong> /caso_exito/</li>
+            <li><strong>Individual:</strong> /caso_exito/tech-solutions/</li>
+            <li><strong>Taxonomía:</strong> /servicios/seo/</li>
+          </ul>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">🧭</span>Navegación</h4>
+          <ul>
+            <li>Añadir al menú principal</li>
+            <li>Breadcrumbs automáticos</li>
+            <li>Filtros por taxonomía</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 29: Beneficios para Marketing -->
+    <section id="slide-29" class="slide fade-in">
+      <span class="slide-counter">29/35</span>
+      <h2>Beneficios para Marketing</h2>
+      <h3>¿Por qué vale la pena el esfuerzo?</h3>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h4>🎯 Conversión</h4>
+          <p>Casos estructurados generan +40% más leads</p>
+        </div>
+        <div class="stat-card">
+          <h4>🔍 SEO</h4>
+          <p>URLs específicas y contenido estructurado</p>
+        </div>
+        <div class="stat-card">
+          <h4>⚡ Eficiencia</h4>
+          <p>Plantillas reutilizables, entrada de datos rápida</p>
+        </div>
+        <div class="stat-card">
+          <h4>📊 Análisis</h4>
+          <p>Métricas específicas por tipo de contenido</p>
+        </div>
+        <div class="stat-card">
+          <h4>🔧 Flexibilidad</h4>
+          <p>Adaptable a cualquier industria o necesidad</p>
+        </div>
+        <div class="stat-card">
+          <h4>💼 Profesional</h4>
+          <p>Imagen de agencia seria y organizada</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 30: Casos de Uso Adicionales -->
+    <section id="slide-30" class="slide fade-in">
+      <span class="slide-counter">30/35</span>
+      <div>
+        <h2 style="margin: 0; line-height: 1;">Casos de Uso Adicionales</h2>
+        <h3 style="line-height: 1;">Más allá de "Casos de Éxito"</h3>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-year">👥</div>
+          <p style="margin: 0;"><strong>Equipo:</strong> Nombre, cargo, bio, foto, especialidades, redes sociales</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">🛍️</div>
+          <p style="margin: 0;"><strong>Productos:</strong> Precio, características, imágenes, categorías</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">📅</div>
+          <p style="margin: 0;"><strong>Eventos:</strong> Fecha, ubicación, precio, agenda, speakers</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">💬</div>
+          <p style="margin: 0;"><strong>Testimonios:</strong> Cliente, industria, rating, video, resultado</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">📚</div>
+          <p style="margin: 0;"><strong>Recursos:</strong> Tipo, descarga, preview, categoría, nivel</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 31: Mejores Prácticas -->
+    <section id="slide-31" class="slide fade-in">
+      <span class="slide-counter">31/35</span>
+      <h2>Mejores Prácticas</h2>
+      <h3>Tips para el Éxito</h3>
+      <div class="resources-grid">
+        <div class="resource-card">
+          <h4><span class="emoji">📋</span>Planificación</h4>
+          <ul>
+            <li>Define campos antes de crear</li>
+            <li>Piensa en el contenido futuro</li>
+            <li>Considera la escalabilidad</li>
+          </ul>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">🎨</span>Diseño</h4>
+          <ul>
+            <li>Consistencia visual</li>
+            <li>Mobile-first siempre</li>
+            <li>Carga rápida de imágenes</li>
+          </ul>
+        </div>
+        <div class="resource-card">
+          <h4><span class="emoji">📊</span>Contenido</h4>
+          <ul>
+            <li>Templates para entrada rápida</li>
+            <li>Imágenes optimizadas</li>
+            <li>SEO en cada campo</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 32: Troubleshooting Común -->
+    <section id="slide-32" class="slide fade-in">
+      <span class="slide-counter">32/35</span>
+      <div>
+        <h2 style="margin: 0; line-height: 1;">Troubleshooting Común</h2>
+        <h3 style="line-height: 1;">Problemas y Soluciones</h3>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-year">❌</div>
+          <p style="margin: 0;"><strong>Problema:</strong> Los campos no aparecen en el editor</p>
+          <p style="margin:0;"><strong>Solución:</strong> Verificar "Location" del grupo de campos</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">🔍</div>
+          <p style="margin: 0;"><strong>Problema:</strong> Archive no muestra el Custom Post Type</p>
+          <p style="margin: 0;"><strong>Solución:</strong> Activar "Public" y "Has Archive" en configuración</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">🎨</div>
+          <p style="margin: 0;"><strong>Problema:</strong> Plantilla no se aplica automáticamente</p>
+          <p style="margin: 0;"><strong>Solución:</strong> Verificar jerarquía de plantillas en FSE</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">📱</div>
+          <p style="margin: 0;"><strong>Problema:</strong> Dynamic Data no funciona</p>
+          <p style="margin: 0;"><strong>Solución:</strong> Actualizar GenerateBlocks y verificar conexión</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 33: Ejercicio Final -->
+    <section id="slide-33" class="slide fade-in">
+      <span class="slide-counter">33/35</span>
+      <div>
+        <h2 style="margin: 0; line-height: 1;">Ejercicio Final</h2>
+        <h3 style="margin: 0; line-height: 1;">Propuesta de Cliente Real</h3>
+      </div>
+      <div style="text-align: center; padding: 0;">
+        <p style="font-size: 1.5rem; margin-bottom: 1rem;"><span class="emoji">🎯</span><strong>Elige un tipo de negocio y diseña su Custom Post Type</strong></p>
+      </div>
+      <div class="action-list" style="margin-block: 1rem;">
+        <div class="action-item">
+          <span class="emoji">🏢</span>Elegir industria (gimnasio, restaurante, consultora...)
+        </div>
+        <div class="action-item">
+          <span class="emoji">📝</span>Definir qué necesitan mostrar
+        </div>
+        <div class="action-item">
+          <span class="emoji">🔧</span>Crear Custom Post Type + campos
+        </div>
+        <div class="action-item">
+          <span class="emoji">🎨</span>Diseñar plantilla básica
+        </div>
+      </div>
+      <div class="warning-box" style="padding: .5rem;">
+        <p style="margin: 0;"><span class="emoji">⏰</span><strong>Tiempo: 15 minutos para planificar y crear estructura</strong></p>
+      </div>
+    </section>
+
+    <!-- Slide 34: Presentación de Resultados -->
+    <section id="slide-34" class="slide fade-in">
+      <span class="slide-counter">34/35</span>
+      <h2>Presentación de Resultados</h2>
+      <h3>Compartimos las Propuestas</h3>
+      <div class="success-box">
+        <h4><span class="emoji">👥</span>Metodología:</h4>
+        <ul>
+          <li>3-4 voluntarios presentan su propuesta</li>
+          <li>¿Qué tipo de negocio eligieron?</li>
+          <li>¿Qué información estructurada necesitan?</li>
+          <li>¿Cómo organizarían la navegación?</li>
+        </ul>
+      </div>
+      <div class="warning-box">
+        <p><span class="emoji">💡</span><strong>Objetivo:</strong> Ver la versatilidad de las entradas personalizadas en diferentes contextos</p>
+      </div>
+    </section>
+
+    <!-- Slide 35: Conclusiones y Próximos Pasos -->
+    <section id="slide-35" class="slide hero fade-in">
+      <span class="slide-counter">35/35</span>
+      <h2>¡Entradas Personalizadas Dominadas!</h2>
+      <h3>Módulo 1 Completado</h3>
+      <div style="font-size: 1.25rem; line-height: 1.8;">
+        <p><span class="emoji">🏆</span><strong>Ya pueden crear sitios web complejos sin limitaciones</strong></p>
+        <p><span class="emoji">🔧</span><strong>Dominan Custom Post Types, Fields y Taxonomías</strong></p>
+        <p><span class="emoji">🎨</span><strong>Plantillas FSE personalizadas para cualquier necesidad</strong></p>
+        <p><span class="emoji">💼</span><strong>Listos para proyectos profesionales reales</strong></p>
+      </div>
+      <div style="margin-top: 3rem;">
+        <h3>¿Preguntas sobre entradas personalizadas?</h3>
+        <p style="margin-top: 2rem;"><strong>¡Felicitaciones por completar el Módulo 1!</strong></p>
+      </div>
+    </section>
+  </main>
+
+  <div class="slide-navigation-buttons">
+    <button class="nav-arrow prev" onclick="prevSlide()" aria-label="Slide anterior">&lt;</button>
+    <button class="nav-arrow next" onclick="nextSlide()" aria-label="Siguiente slide">&gt;</button>
+  </div>
+
+</body>
+</html>
